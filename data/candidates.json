@@ -2,18 +2,18 @@
   {
     "id": "c1",
     "profile": {
-      "name": "株式会社太陽印刷",
+      "name": "株式会社フレッシュタウン",
       "birthday": "",
-      "source": "飛び込み",
+      "source": "既存顧客（30年取引）",
       "email": "",
       "phone": "",
-      "address": "東京都江東区",
+      "address": "茨城県水戸市",
       "recruiter": "鈴木 営業",
       "desiredSalaryMin": "",
       "desiredSalaryMax": "",
       "availableStartDate": "",
       "careerText": "",
-      "motivationFull": ""
+      "motivationFull": "30年以上継続取引の地域大手スーパー（他県跨ぎ60店舗）。バックヤード用包装資材は長年安定供給中。今回は PB 惣菜の新パッケージ提案で本部購買部に資料を投げ、反応待ち。"
     },
     "scorecards": [],
     "stage": "screening"
@@ -21,18 +21,18 @@
   {
     "id": "c2",
     "profile": {
-      "name": "株式会社マルワデイサービス",
+      "name": "株式会社カシマ水産加工",
       "birthday": "",
       "source": "紹介（既存顧客より）",
-      "email": "tanaka@maruwa.example.jp",
-      "phone": "03-XXXX-XXXX",
-      "address": "東京都世田谷区",
+      "email": "tanaka@kashima-suisan.example.jp",
+      "phone": "0299-XX-XXXX",
+      "address": "茨城県神栖市",
       "recruiter": "鈴木 営業",
       "desiredSalaryMin": "300",
       "desiredSalaryMax": "500",
       "availableStartDate": "2026-09-01",
-      "careerText": "2026-05-12  紹介経由で初回コンタクト。担当=田中事務長\n2026-05-20  訪問。サービス概要を説明、参考事例を共有\n2026-05-28  オンラインで詳細打ち合わせ\n2026-06-03  提案資料・見積を送付。経営会議の検討結果待ち",
-      "motivationFull": "現状の介護記録が紙ベース + Excel の二重管理で、月末締めの作業負荷が高い。スタッフ全員（約20名）が使えるシンプルな UI が必須。導入予算は年間500万以内、できれば300万台に収めたい。既存顧客からの紹介で信頼ベースあり、決裁は事務長と理事長の合議。9月から下半期予算で進めたい意向。"
+      "careerText": "2026-05-12  紹介経由で初回コンタクト。担当=製造部 田中部長\n2026-05-20  工場訪問。現状の真空パック資材の使用状況をヒアリング、参考事例を共有\n2026-05-28  オンラインで詳細打ち合わせ\n2026-06-03  提案資料・見積を送付。経営会議の検討結果待ち",
+      "motivationFull": "鹿島港の水産加工拠点。現状の真空パック資材を3社から仕入れていて品質ムラ＋納期遅延が月1-2回発生。担当=製造部 田中部長＋現場主任の2名体制。仕入れを当社1社に一本化したい意向、年間予算300〜500万を想定。既存顧客紹介のため信頼ベースあり、決裁は製造部長＋取締役の合議。9月の秋鮭シーズンから切替で進めたい。"
     },
     "scorecards": [
       {
@@ -42,8 +42,8 @@
         "format": "電話（初回）",
         "interviewer": "鈴木 営業",
         "decision": "前向き",
-        "comment": "紹介経由のため最初から温度感は高め。現状の二重管理に課題を感じている様子。次回はオンサイトでヒアリングを希望。",
-        "summary": "初回コンタクト。介護記録の業務効率化に関心あり。担当=田中事務長。次回は訪問でニーズ深掘り予定。",
+        "comment": "紹介経由のため最初から温度感は高め。真空パック資材の品質ムラと納期遅延に課題を感じている様子。次回はオンサイトでヒアリングを希望。",
+        "summary": "初回コンタクト。真空パック資材の品質ムラ＋納期遅延に関心あり。担当=製造部 田中部長。次回は工場訪問でニーズ深掘り予定。",
         "axisScores": {
           "achievements": 3,
           "thinkingAbility": null,
@@ -59,8 +59,8 @@
         "format": "訪問",
         "interviewer": "鈴木 営業",
         "decision": "前向き",
-        "comment": "オンサイトで業務フローを実地ヒアリング。現状の二重管理の痛点と、導入後のあるべき姿の認識合わせ完了。担当は事務長（田中様）+ 主任（山本様）の2名体制。",
-        "summary": "業務フロー実地ヒアリング。痛点と導入後の姿の合意形成。決裁は事務長+理事長の合議。導入予算は300-500万を想定。",
+        "comment": "工場訪問で資材使用状況を実地ヒアリング。現状の3社仕入れの痛点（品質ムラ・納期遅延・在庫管理コスト）と、一本化後のあるべき姿の認識合わせ完了。担当は製造部長（田中様）+ 現場主任（山本様）の2名体制。",
+        "summary": "工場実地ヒアリング。3社仕入れの痛点と一本化後の姿の合意形成。決裁は製造部長＋取締役の合議。年間予算は300-500万を想定。",
         "axisScores": {
           "achievements": 4,
           "thinkingAbility": 4,
@@ -78,8 +78,8 @@
         "format": "オンライン (Zoom)",
         "interviewer": "鈴木 営業",
         "decision": "前向き",
-        "comment": "提案資料と見積を共有。スタッフ全員に使えるシンプルな UI が評価された。9月導入で進めたい意向だが、経営会議での承認待ち。次のステップは6月中旬の経営会議での結論を待ち、可能なら現場主任に再度デモを行う。",
-        "summary": "提案資料・見積を提示。9月導入希望。経営会議での決裁を待つ段階。次は経営会議の結果待ち→現場デモ。",
+        "comment": "提案資料と見積を共有。資材一本化＋発注プラットフォーム連動の構想が評価された。9月の秋鮭シーズンから切替したい意向だが、経営会議での承認待ち。次のステップは6月中旬の経営会議での結論を待ち、可能なら現場主任に再度サンプル説明を行う。",
+        "summary": "提案資料・見積を提示。9月秋鮭シーズン切替希望。経営会議での決裁を待つ段階。次は経営会議の結果待ち→現場サンプル説明。",
         "axisScores": {
           "achievements": 5,
           "thinkingAbility": 4,
@@ -87,8 +87,8 @@
           "cultureFit": 5
         },
         "attachments": [
-          { "id": "att-c2-second-proposal", "kind": "pdf", "name": "提案資料v2_マルワデイサービス.pdf", "size": "1.2 MB" },
-          { "id": "att-c2-second-quote", "kind": "pdf", "name": "見積書_マルワデイサービス.pdf", "size": "76 KB" }
+          { "id": "att-c2-second-proposal", "kind": "pdf", "name": "提案資料v2_カシマ水産加工.pdf", "size": "1.2 MB" },
+          { "id": "att-c2-second-quote", "kind": "pdf", "name": "見積書_カシマ水産加工.pdf", "size": "76 KB" }
         ]
       }
     ],
@@ -97,18 +97,18 @@
   {
     "id": "c3",
     "profile": {
-      "name": "グリーンライフ運送株式会社",
+      "name": "株式会社グリーンキッチンホールディングス",
       "birthday": "",
       "source": "Web 問合せ",
-      "email": "info@greenlife.example.jp",
-      "phone": "045-XXXX-XXXX",
-      "address": "神奈川県横浜市",
+      "email": "purchasing@greenkitchen.example.jp",
+      "phone": "027-XXX-XXXX",
+      "address": "群馬県高崎市",
       "recruiter": "田中 営業",
-      "desiredSalaryMin": "150",
-      "desiredSalaryMax": "250",
+      "desiredSalaryMin": "1500",
+      "desiredSalaryMax": "2500",
       "availableStartDate": "2026-08-15",
       "careerText": "2026-05-25  Web 問合せ経由で初回コンタクト\n2026-06-02  電話でニーズヒアリング、概要資料を送付",
-      "motivationFull": "配送スタッフ（12名）の日報管理を効率化したい。現状は紙と FAX で本社に送る運用で集計に時間がかかる。スマホで簡単に入力できる仕組みが欲しい。"
+      "motivationFull": "全国 300+ 店舗のファミレスチェーン（東証上場）。テイクアウト容器・サイドメニュー包装の取引先を見直し中。コスト圧縮＋環境対応素材の比率引き上げが本部方針。担当=本部購買部＋マーケ責任者。年間予算は試算段階で 1500〜2500 万円規模、決裁は購買部長→取締役会の合議。8月の秋メニュー切替前に詰めたい意向。"
     },
     "scorecards": [
       {
@@ -119,7 +119,7 @@
         "interviewer": "田中 営業",
         "decision": "前向き",
         "comment": "Web 問合せからの流入。資料請求の段階。次回は電話でニーズ確認。",
-        "summary": "Web 経由のリード獲得。日報管理の効率化ニーズ。",
+        "summary": "Web 経由のリード獲得。テイクアウト容器の見直しニーズ。",
         "axisScores": {
           "achievements": 3,
           "thinkingAbility": null,
@@ -135,8 +135,8 @@
         "format": "電話",
         "interviewer": "田中 営業",
         "decision": "前向き",
-        "comment": "ニーズヒアリング実施。配送スタッフ用のスマホ入力が要件。予算は年間200万前後を想定。決裁は社長単独。次回は訪問で詳細詰めたい。",
-        "summary": "スマホ入力 UI が必要要件。予算200万前後・社長決裁・8月導入希望。",
+        "comment": "本部購買部とニーズヒアリング実施。テイクアウト容器のコスト圧縮＋環境対応素材比率の引き上げが要件。決裁は購買部長→取締役会の合議。次回は本部訪問で具体スペック詰めたい。",
+        "summary": "テイクアウト容器の刷新が要件。年間 1500-2500 万規模・購買部長→取締役会決裁・8月秋メニュー切替前に詰めたい。",
         "axisScores": {
           "achievements": 4,
           "thinkingAbility": 3,
@@ -151,18 +151,18 @@
   {
     "id": "c4",
     "profile": {
-      "name": "さくら不動産株式会社",
+      "name": "株式会社マルカネスーパー",
       "birthday": "",
       "source": "展示会",
-      "email": "sales@sakura-re.example.jp",
-      "phone": "06-XXXX-XXXX",
-      "address": "大阪府大阪市",
+      "email": "purchasing@marukane.example.jp",
+      "phone": "028-XXX-XXXX",
+      "address": "栃木県宇都宮市",
       "recruiter": "田中 営業",
       "desiredSalaryMin": "200",
       "desiredSalaryMax": "400",
       "availableStartDate": "2026-10-01",
       "careerText": "2026-04-22  展示会ブースで接触\n2026-05-08  訪問ヒアリング\n2026-05-29  提案資料を提出",
-      "motivationFull": "営業担当者（8名）の物件案内記録をデジタル化したい。現状は紙の案内記録を月末にまとめて入力していて、リアルタイム性がない。顧客フォローの抜け漏れを防ぎたい。"
+      "motivationFull": "県内 20 店舗のローカルスーパーチェーン。現状の包装資材は地場の老舗包材問屋が長年担当しており、関係性が太く参入余地が限定的。痛点としては配送リードタイムの長さ＋月末請求書の処理遅延を挙げているが、現行取引先への信頼が厚く比較・乗り換えのハードルは高い。10 月の新 POS システム稼働を切り口に再度仕切り直したい意向。"
     },
     "scorecards": [
       {
@@ -172,8 +172,8 @@
         "format": "訪問",
         "interviewer": "田中 営業",
         "decision": "前向き",
-        "comment": "営業所長と1.5時間ヒアリング。痛点はフォロー漏れと月末入力の手間。10月のキックオフに合わせて検討中。",
-        "summary": "営業所長と痛点合意。フォロー漏れ防止が主目的。10月キックオフ希望。",
+        "comment": "営業所長と 1.5 時間ヒアリング。痛点は配送リードタイムと月末請求の処理遅延。10 月の新 POS 稼働に合わせて取引先見直しを検討中とのこと。",
+        "summary": "営業所長と痛点合意。配送リードタイム改善が主目的。10 月新 POS 稼働に合わせ検討。",
         "axisScores": {
           "achievements": 4,
           "thinkingAbility": 3,
@@ -189,8 +189,8 @@
         "format": "メール（資料送付）",
         "interviewer": "田中 営業",
         "decision": "保留",
-        "comment": "提案資料を送付。先方から「価格を再検討したい」と返信あり。次回は条件調整のためオンライン MTG を6月中旬に設定予定。",
-        "summary": "提案後、価格調整段階。6月中旬に再面談予定。",
+        "comment": "提案資料を送付。先方から「現行取引先（地場の老舗包材問屋）と比較して再検討したい」と返信あり。価格・実績で差別化が必要。次回は条件調整のためオンライン MTG を 6 月中旬に設定予定。",
+        "summary": "提案後、現行取引先との比較段階。価格・実績で差別化必要。6 月中旬に再面談予定。",
         "axisScores": {
           "achievements": 4,
           "thinkingAbility": 3,
@@ -198,7 +198,7 @@
           "cultureFit": 4
         },
         "attachments": [
-          { "id": "att-c4-proposal", "kind": "pdf", "name": "提案資料_さくら不動産.pdf", "size": "880 KB" }
+          { "id": "att-c4-proposal", "kind": "pdf", "name": "提案資料_マルカネスーパー.pdf", "size": "880 KB" }
         ]
       }
     ],
@@ -207,18 +207,18 @@
   {
     "id": "c5",
     "profile": {
-      "name": "ハッピーフーズ株式会社",
+      "name": "株式会社ナスノミート",
       "birthday": "",
       "source": "紹介（取引先より）",
-      "email": "tanaka@happyfoods.example.jp",
-      "phone": "03-XXXX-XXXX",
-      "address": "東京都港区",
+      "email": "tanaka@nasuno-meat.example.jp",
+      "phone": "0287-XX-XXXX",
+      "address": "栃木県那須塩原市",
       "recruiter": "山田 営業",
       "desiredSalaryMin": "100",
       "desiredSalaryMax": "200",
       "availableStartDate": "",
       "careerText": "2026-05-30  既存取引先からの紹介で接触\n2026-06-04  オンラインで簡単な顔合わせ",
-      "motivationFull": "店舗（5店舗・各10名前後）の販売スタッフ向けに、日次の売上・接客ログを残せる仕組みを探している。本部としては店舗間の差分を分析したい。"
+      "motivationFull": "那須エリアの畜産加工メーカー（ハム・ソーセージ・精肉カット）。各製造ラインで使う真空パック資材を統一して在庫管理を効率化したい。本部としては資材種類削減によるコスト圧縮も狙う。次回は工場長交えて要件詰め予定、予算感は来月確定見込み。"
     },
     "scorecards": [
       {
@@ -228,8 +228,8 @@
         "format": "オンライン (Google Meet)",
         "interviewer": "山田 営業",
         "decision": "前向き",
-        "comment": "本部マーケ責任者と面談。データ分析寄りのニーズが強い。次回は店舗代表者も交えて要件詰めしたい。予算感は来月確定予定。",
-        "summary": "本部マーケ責任者と面談。データ分析ニーズ強め。次回は店舗代表者交え要件詰め。",
+        "comment": "本部購買責任者と面談。各製造ラインで使う資材種類が増えてしまっている現状の整理ニーズが強い。次回は工場長も交えて要件詰めしたい。予算感は来月確定予定。",
+        "summary": "本部購買責任者と面談。資材種類削減＋在庫効率化ニーズ強め。次回は工場長交え要件詰め。",
         "axisScores": {
           "achievements": 4,
           "thinkingAbility": 3,
@@ -244,18 +244,18 @@
   {
     "id": "c6",
     "profile": {
-      "name": "みやぎ自動車整備",
+      "name": "株式会社上州フレッシュファーム",
       "birthday": "",
       "source": "紹介",
-      "email": "miyagi@example.jp",
-      "phone": "022-XXXX-XXXX",
-      "address": "宮城県仙台市",
+      "email": "info@joshu-farm.example.jp",
+      "phone": "027-XXX-XXXX",
+      "address": "群馬県前橋市",
       "recruiter": "鈴木 営業",
       "desiredSalaryMin": "180",
       "desiredSalaryMax": "220",
       "availableStartDate": "2026-07-15",
-      "careerText": "2026-04-10  紹介経由\n2026-04-25  ヒアリング訪問\n2026-05-12  提案・見積提示\n2026-05-30  経営会議で承認、契約手続き開始\n2026-06-05  契約締結、キックオフ MTG 調整中",
-      "motivationFull": "整備士（6名）の作業ログをデジタル化したい。現状は紙の作業票で、月末の請求書作成と紐づけに手間がかかっている。社長が主導で導入を進めており、決裁スピードは速い。"
+      "careerText": "2026-04-10  紹介経由\n2026-04-25  ヒアリング訪問\n2026-05-12  提案・見積提示\n2026-05-30  経営会議で承認、契約手続き開始\n2026-06-05  契約締結、初回ロット調整中",
+      "motivationFull": "群馬県前橋市の野菜生産法人。直販向け野菜の包装パッケージ（袋・ラベル・緩衝材）を刷新したい。痛点＝既存資材の破袋率の高さと印刷品質。社長主導で進めており、決裁スピードは速い。"
     },
     "scorecards": [
       {
@@ -265,8 +265,8 @@
         "format": "訪問",
         "interviewer": "鈴木 営業",
         "decision": "前向き",
-        "comment": "社長同席でヒアリング。作業票デジタル化の痛点を共有。請求書連動が要件として強い。",
-        "summary": "社長主導の案件。要件＝作業票→請求書の連動。7月キックオフ希望。",
+        "comment": "社長同席でヒアリング。直販パッケージの破袋率高・印刷品質の課題を共有。出荷オペレーションへの統合が要件として強い。",
+        "summary": "社長主導の案件。要件＝破袋率改善＋印刷品質向上。7 月初回ロット希望。",
         "axisScores": {
           "achievements": 4,
           "thinkingAbility": 4,
@@ -282,8 +282,8 @@
         "format": "訪問",
         "interviewer": "鈴木 営業",
         "decision": "前向き",
-        "comment": "提案・見積を社長へ直接提示。要件は概ねカバー、価格は200万弱で握り。経営会議で承認確認待ち。",
-        "summary": "提案・見積を提示。200万弱で握り。経営会議承認待ち。",
+        "comment": "提案・見積を社長へ直接提示。要件は概ねカバー、価格は 200 万弱で握り。経営会議で承認確認待ち。",
+        "summary": "提案・見積を提示。200 万弱で握り。経営会議承認待ち。",
         "axisScores": {
           "achievements": 5,
           "thinkingAbility": 5,
@@ -291,7 +291,7 @@
           "cultureFit": 5
         },
         "attachments": [
-          { "id": "att-c6-quote", "kind": "pdf", "name": "見積書_みやぎ自動車整備.pdf", "size": "82 KB" }
+          { "id": "att-c6-quote", "kind": "pdf", "name": "見積書_上州フレッシュファーム.pdf", "size": "82 KB" }
         ]
       },
       {
@@ -301,8 +301,8 @@
         "format": "電話",
         "interviewer": "鈴木 営業",
         "decision": "受注",
-        "comment": "契約締結。7/15 キックオフに向けて、設定情報のヒアリング・初期データ移行・現場研修の3点を進める必要あり。担当アサインは来週確定。",
-        "summary": "受注確定。7/15 キックオフへ向け初期セットアップ作業へ移行。",
+        "comment": "契約締結。7/15 初回ロット手配に向けて、印刷データのヒアリング・サンプル承認・現場研修の 3 点を進める必要あり。担当アサインは来週確定。",
+        "summary": "受注確定。7/15 初回ロットへ向け初期セットアップ作業へ移行。",
         "axisScores": {
           "achievements": 5,
           "thinkingAbility": 5,
@@ -310,7 +310,7 @@
           "cultureFit": 5
         },
         "attachments": [
-          { "id": "att-c6-contract", "kind": "pdf", "name": "契約書_みやぎ自動車整備.pdf", "size": "210 KB" }
+          { "id": "att-c6-contract", "kind": "pdf", "name": "契約書_上州フレッシュファーム.pdf", "size": "210 KB" }
         ]
       }
     ],
@@ -319,18 +319,18 @@
   {
     "id": "c7",
     "profile": {
-      "name": "みらいテクノロジー株式会社",
+      "name": "株式会社赤城ベーカリー",
       "birthday": "",
       "source": "Web 問合せ",
       "email": "",
       "phone": "",
-      "address": "東京都渋谷区",
+      "address": "群馬県伊勢崎市",
       "recruiter": "田中 営業",
       "desiredSalaryMin": "",
       "desiredSalaryMax": "",
       "availableStartDate": "",
       "careerText": "2026-06-04  Web 問合せ。資料請求のみ",
-      "motivationFull": "資料請求の段階。具体的なニーズはまだ確認できていない。次回コンタクト時に背景と課題をヒアリング予定。"
+      "motivationFull": "群馬県伊勢崎市のパン製造業者。資料請求の段階。具体的なニーズはまだ確認できていない。次回コンタクト時に背景と課題をヒアリング予定。"
     },
     "scorecards": [
       {
@@ -340,7 +340,7 @@
         "format": "メール（資料送付）",
         "interviewer": "田中 営業",
         "decision": "保留",
-        "comment": "Web 問合せ→資料送付のみ。返信なし。次回は1週間以内に電話フォローアップを予定。",
+        "comment": "Web 問合せ→資料送付のみ。返信なし。次回は 1 週間以内に電話フォローアップを予定。",
         "summary": "資料送付段階。返信待ち、要追客。",
         "axisScores": {
           "achievements": 2,
@@ -356,18 +356,18 @@
   {
     "id": "c8",
     "profile": {
-      "name": "株式会社カミムラ製作所",
+      "name": "株式会社つくば農産",
       "birthday": "",
       "source": "飛び込み",
       "email": "",
-      "phone": "048-XXXX-XXXX",
-      "address": "埼玉県川口市",
+      "phone": "029-XXX-XXXX",
+      "address": "茨城県つくば市",
       "recruiter": "山田 営業",
       "desiredSalaryMin": "",
       "desiredSalaryMax": "",
       "availableStartDate": "",
-      "careerText": "2026-03-15  飛び込み訪問\n2026-04-02  資料説明・反応薄\n2026-04-20  追客電話→「現状で困っていない」と回答",
-      "motivationFull": "現時点で具体ニーズなし。半年後に再度状況確認の予定。"
+      "careerText": "2026-03-15  飛び込み訪問\n2026-04-02  資料説明・反応薄\n2026-04-20  追客電話→「現状の資材で困っていない」と回答",
+      "motivationFull": "茨城県つくば市の野菜生産者。現時点で具体ニーズなし。半年後に再度状況確認の予定。"
     },
     "scorecards": [
       {
@@ -377,7 +377,7 @@
         "format": "電話",
         "interviewer": "山田 営業",
         "decision": "見送り",
-        "comment": "「現状で困っていない」とのこと。半年後に再アプローチする方針で一旦保留。",
+        "comment": "「現状の資材で困っていない」とのこと。半年後に再アプローチする方針で一旦保留。",
         "summary": "ニーズなし、半年後の再アプローチへ。",
         "axisScores": {
           "achievements": 1,

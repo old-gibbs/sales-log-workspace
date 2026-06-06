@@ -274,7 +274,7 @@ export function CandidateListPane({
           description={`「${addDialogStage.label}」ステージに顧客を追加します`}
           fieldLabel="氏名"
           fieldId="candidate-name"
-          placeholder="例: 山田 太郎"
+          placeholder="例: 株式会社〇〇商事"
           onAdd={(name) => onAddCandidate(addDialogStage.stage, name)}
         />
       )}
