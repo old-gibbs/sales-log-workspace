@@ -200,7 +200,7 @@ export function CandidateListPane({
     <section className="flex w-[280px] shrink-0 flex-col border-r border-border bg-background">
       <header className="flex h-12 shrink-0 items-center border-b border-border px-3">
         <h2 className="truncate text-sm font-semibold text-foreground">
-          フロントエンドエンジニア
+          対応待ち顧客
         </h2>
       </header>
       <ScrollArea className="min-h-0 flex-1">

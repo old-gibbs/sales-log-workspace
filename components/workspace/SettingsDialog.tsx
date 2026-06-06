@@ -54,13 +54,13 @@ export function SettingsDialogContent({
         <DialogHeader>
           <DialogTitle>ワークスペース設定</DialogTitle>
           <DialogDescription>
-            事業部やワークスペース名を管理します
+            フィルタカテゴリやワークスペース名を管理します
           </DialogDescription>
         </DialogHeader>
 
         <FieldGroup>
           <Field>
-            <FieldLabel htmlFor="settings-new-dept">事業部</FieldLabel>
+            <FieldLabel htmlFor="settings-new-dept">フィルタカテゴリ</FieldLabel>
             <ScrollArea className="max-h-48">
               <div className="divide-y divide-border rounded-lg border border-border">
                 {departments.map((dept) => (
@@ -85,7 +85,7 @@ export function SettingsDialogContent({
                 ))}
                 {departments.length === 0 && (
                   <div className="px-3 py-4 text-center text-sm text-muted-foreground">
-                    事業部がありません
+                    フィルタカテゴリがありません
                   </div>
                 )}
               </div>
@@ -93,7 +93,7 @@ export function SettingsDialogContent({
             <InputGroup>
               <InputGroupInput
                 id="settings-new-dept"
-                placeholder="新しい事業部名"
+                placeholder="新しいフィルタカテゴリ名"
                 value={newDeptName}
                 onChange={(e) => setNewDeptName(e.target.value)}
                 onKeyDown={(e) => {
@@ -134,7 +134,7 @@ export function SettingsDialogContent({
         onOpenChange={(open) => {
           if (!open) setDeleteDeptTarget(null);
         }}
-        title="事業部を削除しますか？"
+        title="フィルタカテゴリを削除しますか？"
         itemName={deleteDeptTarget?.name ?? ""}
         onConfirm={() => {
           if (deleteDeptTarget) {

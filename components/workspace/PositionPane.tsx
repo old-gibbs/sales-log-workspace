@@ -74,12 +74,12 @@ export function PositionPane({
                 {dept.name}
               </SidebarGroupLabel>
               <SidebarGroupAction
-                title={`${dept.name} にポジションを追加`}
+                title={`${dept.name} にフィルタを追加`}
                 onClick={() => setAddDialogDeptId(dept.id)}
                 className="w-6 rounded-[min(var(--radius-md),10px)] text-muted-foreground hover:bg-muted hover:text-foreground [&>svg]:size-3"
               >
                 <Plus />
-                <span className="sr-only">{dept.name} にポジションを追加</span>
+                <span className="sr-only">{dept.name} にフィルタを追加</span>
               </SidebarGroupAction>
               <SidebarGroupContent>
                 <SidebarMenu>
@@ -140,9 +140,9 @@ export function PositionPane({
           onOpenChange={(open) => {
             if (!open) setAddDialogDeptId(null);
           }}
-          title="ポジションを追加"
-          description={`${addDialogDept.name} に新しいポジションを追加します`}
-          fieldLabel="ポジション名"
+          title="フィルタを追加"
+          description={`${addDialogDept.name} に新しいフィルタを追加します`}
+          fieldLabel="フィルタ名"
           fieldId="pos-name"
           placeholder="例: データエンジニア"
           onAdd={(name) => onAddPosition(addDialogDept.id, name)}
@@ -154,7 +154,7 @@ export function PositionPane({
         onOpenChange={(open) => {
           if (!open) setDeleteTarget(null);
         }}
-        title="ポジションを削除しますか？"
+        title="フィルタを削除しますか？"
         itemName={deleteTarget?.posName ?? ""}
         onConfirm={() => {
           if (deleteTarget) {
