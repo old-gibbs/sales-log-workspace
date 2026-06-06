@@ -120,7 +120,7 @@ export function SettingsDialogContent({
             <FieldLabel htmlFor="settings-workspace-name">
               ワークスペース名
             </FieldLabel>
-            <Input id="settings-workspace-name" defaultValue="採用管理" />
+            <Input id="settings-workspace-name" defaultValue="営業活動ログ" />
           </Field>
         </FieldGroup>
 

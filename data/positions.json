@@ -1,19 +1,18 @@
 [
   {
-    "id": "d-product",
-    "name": "プロダクト開発",
+    "id": "d-priority",
+    "name": "緊急度",
     "positions": [
-      { "id": "p-fe", "name": "フロントエンドエンジニア", "count": 4 },
-      { "id": "p-be", "name": "バックエンドエンジニア", "count": 3 },
-      { "id": "p-design", "name": "デザイナー", "count": 2 }
+      { "id": "p-overdue", "name": "期限切れ", "count": 2 },
+      { "id": "p-this-week", "name": "今週期限", "count": 3 }
     ]
   },
   {
-    "id": "d-biz",
-    "name": "ビジネス",
+    "id": "d-temperature",
+    "name": "温度感",
     "positions": [
-      { "id": "p-pm", "name": "プロダクトマネージャー", "count": 3 },
-      { "id": "p-sales", "name": "セールス", "count": 4 }
+      { "id": "p-hot", "name": "ホット顧客", "count": 2 },
+      { "id": "p-all-pending", "name": "全対応待ち", "count": 8 }
     ]
   }
 ]

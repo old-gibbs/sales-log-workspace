@@ -270,8 +270,8 @@ export function CandidateListPane({
           onOpenChange={(open) => {
             if (!open) setAddDialogStage(null);
           }}
-          title="候補者を追加"
-          description={`「${addDialogStage.label}」ステージに候補者を追加します`}
+          title="顧客を追加"
+          description={`「${addDialogStage.label}」ステージに顧客を追加します`}
           fieldLabel="氏名"
           fieldId="candidate-name"
           placeholder="例: 山田 太郎"
@@ -284,7 +284,7 @@ export function CandidateListPane({
         onOpenChange={(open) => {
           if (!open) setArchiveTarget(null);
         }}
-        title="候補者をアーカイブしますか？"
+        title="この顧客を失注・保留に移しますか？"
         itemName={archiveTarget?.name ?? ""}
         description={`「${archiveTarget?.name ?? ""}」をアーカイブします。後で「アーカイブ済み」から復元できます。`}
         actionLabel="アーカイブ"

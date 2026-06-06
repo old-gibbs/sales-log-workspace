@@ -66,18 +66,19 @@ type EditableScorecardKey =
 // ===== 定数（screening-lab / profile-card-lab から移植） =====
 
 const FORMAT_OPTIONS = [
-  "書類",
-  "オンライン (Google Meet)",
-  "オフライン",
+  "メール",
+  "電話",
+  "訪問",
+  "オンライン (Zoom/Meet)",
 ] as const;
 
-const DECISION_OPTIONS = ["通過", "保留", "不合格"] as const;
+const DECISION_OPTIONS = ["前向き", "保留", "見送り", "受注", "失注"] as const;
 
 const INITIAL_INTERVIEWER_OPTIONS: ComboOption[] = [
-  { value: "田中 花子", description: "採用担当チーム" },
-  { value: "佐藤 太郎", description: "エンジニアリングマネージャー" },
-  { value: "鈴木 一郎", description: "シニアエンジニア" },
-  { value: "山田 美咲", description: "プロダクトマネージャー" },
+  { value: "鈴木 営業", description: "営業チーム" },
+  { value: "田中 営業", description: "営業チーム" },
+  { value: "山田 営業", description: "営業チーム" },
+  { value: "佐藤 マネージャー", description: "営業マネージャー" },
 ];
 
 // ===== 選考ステージ詳細（旧モード 2、ADR-0015 で唯一のモードに） =====
@@ -109,9 +110,9 @@ function Mode2StageDetail({
   ) => void;
 }) {
   const isScreening = scorecard.stage === "screening";
-  const interviewerLabel = isScreening ? "審査担当" : "面接官";
-  const summaryHeading = isScreening ? "書類の要約" : "面接の要約";
-  const attachmentHeading = isScreening ? "提出書類" : "添付";
+  const interviewerLabel = "対応者";
+  const summaryHeading = isScreening ? "情報収集サマリ" : "接触サマリ";
+  const attachmentHeading = isScreening ? "受領資料" : "添付資料";
 
   const [interviewerOptions, setInterviewerOptions] = useState<ComboOption[]>(
     INITIAL_INTERVIEWER_OPTIONS,

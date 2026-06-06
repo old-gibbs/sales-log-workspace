@@ -250,13 +250,13 @@ function RecruitingConditionsCard({
       </CardHeader>
       <CardContent>
         <dl className="flex flex-col gap-2.5 text-sm">
-          <InlineFieldRow label="希望年収">
+          <InlineFieldRow label="想定予算">
             <div className="flex items-center gap-1.5">
               <div className="w-20">
                 <InlineTextField
                   value={profile.desiredSalaryMin}
                   onSave={(v) => updateField("desiredSalaryMin", v)}
-                  ariaLabel="希望年収（下限）"
+                  ariaLabel="想定予算（下限）"
                   placeholder="—"
                 />
               </div>
@@ -265,7 +265,7 @@ function RecruitingConditionsCard({
                 <InlineTextField
                   value={profile.desiredSalaryMax}
                   onSave={(v) => updateField("desiredSalaryMax", v)}
-                  ariaLabel="希望年収（上限）"
+                  ariaLabel="想定予算（上限）"
                   placeholder="—"
                 />
               </div>
@@ -274,11 +274,11 @@ function RecruitingConditionsCard({
               </span>
             </div>
           </InlineFieldRow>
-          <InlineFieldRow label="入社可能日">
+          <InlineFieldRow label="導入想定日">
             <InlineDateField
               value={profile.availableStartDate}
               onSave={(v) => updateField("availableStartDate", v)}
-              ariaLabel="入社可能日"
+              ariaLabel="導入想定日"
             />
           </InlineFieldRow>
         </dl>
@@ -393,14 +393,14 @@ function ScreeningFlowListCard({
   );
 }
 
-// ===== 応募経路の選択肢（Pane 3 ヘッダー帯トグル内で使用） =====
+// ===== 流入経路の選択肢（Pane 3 ヘッダー帯トグル内で使用） =====
 
 const INITIAL_SOURCE_OPTIONS: ComboOption[] = [
-  { value: "社員リファラル", description: "既存社員からの紹介で応募" },
-  { value: "Wantedly", description: "Wantedly 経由の応募" },
-  { value: "LinkedIn", description: "LinkedIn 経由の応募" },
-  { value: "直接応募", description: "自社採用ページから直接応募" },
-  { value: "エージェント経由", description: "採用エージェントを介した応募" },
+  { value: "紹介", description: "既存顧客・取引先からの紹介" },
+  { value: "Web 問合せ", description: "自社サイトからの問い合わせ" },
+  { value: "展示会", description: "展示会・イベントで接触" },
+  { value: "飛び込み", description: "飛び込み訪問・テレアポ" },
+  { value: "メール DM", description: "メール経由のアウトバウンド" },
 ];
 
 // ===== ヘッダー帯トグル内の連絡先行 =====
@@ -461,13 +461,13 @@ function ApplicationInfoCardContent({
               ariaLabel="名前"
             />
           </InlineFieldRow>
-          <InlineFieldRow label="生年月日">
+          <InlineFieldRow label="登録日">
             <div className="flex items-center gap-2">
               <div className="flex-1">
                 <InlineDateField
                   value={profile.birthday}
                   onSave={(v) => updateField("birthday", v)}
-                  ariaLabel="生年月日"
+                  ariaLabel="登録日"
                 />
               </div>
               <span className="shrink-0 text-xs text-muted-foreground">
@@ -475,20 +475,20 @@ function ApplicationInfoCardContent({
               </span>
             </div>
           </InlineFieldRow>
-          <InlineFieldRow label="応募経路">
+          <InlineFieldRow label="流入経路">
             <InlineComboboxField
               value={profile.source}
               options={sourceOptions}
               onSave={(v) => updateField("source", v)}
               onCreate={handleAddSource}
-              ariaLabel="応募経路"
+              ariaLabel="流入経路"
             />
           </InlineFieldRow>
-          <InlineFieldRow label="採用担当">
+          <InlineFieldRow label="自社担当">
             <InlineTextField
               value={profile.recruiter}
               onSave={(v) => updateField("recruiter", v)}
-              ariaLabel="採用担当"
+              ariaLabel="自社担当"
             />
           </InlineFieldRow>
         </dl>
