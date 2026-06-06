@@ -165,10 +165,10 @@ hooks/
 
 ## デプロイ
 
-Vercel に接続済み（手動 Import 経由）。
+Vercel に接続済み（GitHub 連携、`main` ブランチへの push で自動デプロイ）。
 
-- Production URL: （Vercel デプロイ後に追記）
-- Preview: 各PRごとにVercelが自動生成
+- **Production URL**: https://sales-log-workspace.vercel.app/
+- Preview: 各PRごとに Vercel が自動生成
 
 ## 同梱スキル
 
