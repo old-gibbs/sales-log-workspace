@@ -3,17 +3,19 @@
 営業活動ログ用のワークスペース UI プロトタイプ（**4ペイン、Next.js 16 + shadcn/ui**）。
 朝1分で「対応待ち顧客の状況把握」と「今日やる追客の優先順位決定」を完了するための画面。
 
-> 第5回・第6回 月次課題（自分の思想を画面にする月）の提出物。
-> 配布雛形 `workspace-ui-kit`（採用管理サンプル）をベースに、営業活動ログ向けに retheme した「踏襲ルート」案件。
+> 第5〜第7回 月次課題の提出物。
+> - 第5・6回（自分の思想を画面にする月）: 配布雛形 `workspace-ui-kit`（採用管理サンプル）をベースに、営業活動ログ向けに retheme した踏襲ルート案件として提出。
+> - 第7回（データを保存できる Web アプリにして Vercel に公開する月）: P0 として顧客マスタと「次回アクション」を Neon Postgres に永続化、P1 として GAS の週次集計をツールに取り込む同期機能を追加。
+> 段階定義は本 README の「段階定義（P0/P1/P2 以降）」を参照。
 
 ## 関連する既存物
 
 | 項目 | 場所 | 内容 |
 |------|------|------|
-| 営業活動ログ MVP（運用中） | `personal-visual-explainers/.claude/skills/weekly-sales-log/` | Googleフォーム + GAS + スプレッドシート。実データの入力・保存・週次メール送信を担当 |
-| **本リポジトリ** | このリポ | UI プロトタイプ。**データ保存なし**（モックデータのみ）、見た目と操作感の検証用 |
+| 営業活動ログ MVP（運用中） | `personal-visual-explainers/.claude/skills/weekly-sales-log/` | Googleフォーム + GAS + スプレッドシート。**入力・蓄積・週次集計の SoT**（Source of Truth = 正本）として運用中 |
+| **本リポジトリ** | このリポ | 営業活動ログ向け Viewer + 報告組み立てツール。Layer 1（第5・6回提出時点）はモックのみ。**P0（第7回）以降は Neon Postgres に「次回アクション」と顧客マスタを永続化** |
 
-`weekly-sales-log` MVP の `activity_log` スキーマ（`timestamp` / `customer_name` / `temperature` / `next_action` 等）を**モックデータとして流用**することで、課題提出と将来の本物ワークスペース設計検証を兼ねている。
+第5・6回提出時点では `weekly-sales-log` MVP の `activity_log` スキーマ（`timestamp` / `customer_name` / `temperature` / `next_action` 等）を**モックデータとして流用**していた。第7回以降は GAS との責任分界を明示し、**GAS が SoT、本ツールがミラー + ツール固有データ**として振る舞う構成に進化させる（詳細は CLAUDE.md「データ責任分界」表を参照）。
 
 ## このワークスペースで何ができる（=設計意図）
 
@@ -138,30 +140,55 @@ hooks/
 | 入社可能日 | 導入想定日 |
 | 面接官 / 審査担当 | 対応者 |
 
-## 既知の制限・今後のアップデート予定
+## 段階定義（P0 / P1 / P2 以降）
 
-### Layer 1（提出時点）の限界
+第7回課題で「データを保存できる Web アプリ」化するため、以下の段階で育てる。各段階の入る順番（P0 → P1 → P2）と、**何を Neon に置き、何を GAS に残すか** は CLAUDE.md「データ責任分界」表に従う。
 
-- **型名は採用管理ドメインのまま**: `Candidate` / `Profile` / `Scorecard` 等。コードを読むときに目障りだが、提出物の見た目には影響しない
-- **データは保存されない**: モック JSON を `useState` で読み込むだけ。リロードで初期状態に戻る
-- **Pane 4 は接触記録の詳細編集のまま**: Phase 1 設計で詰めた「今日やる」リストはまだ実装されていない（Layer 2 として後付け予定）
-- **Pane 1 のフィルタはまだ動かない**: 表示だけで、クリックしても Pane 2 の絞り込みは効かない（Layer 3 として後付け予定）
+### Layer 1（第5・6回提出時点 / 完了済み）
 
-### Layer 2 で計画している変更
+- 配布雛形 `workspace-ui-kit` を営業活動ログドメインに retheme
+- データ保存なし、モック JSON を `useState` で読み込むだけ
+- 型名は採用管理ドメインのまま（`Candidate` / `Profile` / `Scorecard` 等）
 
-- Pane 4 を「接触記録の詳細編集」→「今日やる追客リスト」に**再設計**
-  - 顧客カードをドラッグ or ボタンで Pane 4 に追加
-  - チェックで完了、ペイン2 の対応待ちリストから自動で消える（state lifting）
-  - 同期動作（ペイン2 ⇄ ペイン4）
-- 「今日やる」マークと「対応済み」マークのフラグを `Candidate` に追加
+### P0（第7回課題の必須要件）
 
-### Layer 3 で計画している変更
+- Neon プロジェクト作成 + Vercel ストレージ連携 + Drizzle ORM 導入
+- DB スキーマ: `customers`（顧客マスタ）+ `customer_next_actions`（ツール固有の「次回アクション」）
+- 顧客マスタ 8 社を Neon に手動 INSERT（`name` は GAS `customer_master.official_name` と完全一致）
+- ツール側の顧客読み込み源を `data/candidates.json` から Neon に切り替え
+- Pane 3 or 4 に「次回アクション」UI を追加（Server Action で保存・更新・完了切替）
+- Vercel デプロイ + 環境変数（`DATABASE_URL`）設定
 
-- `lib/schema.ts` の型名を営業活動ログドメインに改名（`Candidate` → `Customer` 等）
+### P1（第7回課題の推奨範囲・連携の中核）
+
+- Google Sheets API 認証セットアップ（GCP プロジェクト + サービスアカウント発行 + シート共有設定）
+- DB スキーマ追加: `weekly_summary_snapshots(id, period_start, period_end, payload_json, imported_at)`
+- Server Action「GAS から `weekly_summary` 取り込み」（最新 + 過去4週、手動「同期」ボタン）
+- 取り込み結果の表示 UI（Pane 1 の対応待ち上部に「今週のサマリ」バナー等）
+
+### P2 以降（第8回課題以降に持ち越し）
+
+- **Layer 2**: Pane 4 を「接触記録の詳細編集」→「今日やる追客リスト」に再設計（同期動作・state lifting・「今日やる」「対応済み」フラグ）
+- **Layer 3**: 型名を営業ドメインに改名（`Candidate` → `Customer` 等）、`data/candidates.json` を `data/customers.json` にリネーム、`__tests__/` を新スキーマに合わせて書き直し、`.claude/skills/designing-workspace-ui/` を営業活動ログ向けに書き直し
 - Pane 1 のフィルタを実際に動作させる（クリックで Pane 2 を絞り込み）
-- `__tests__/` のテストを新スキーマに合わせて書き直し
-- `data/candidates.json` を `data/customers.json` 等にリネーム
-- `.claude/skills/designing-workspace-ui/` を「営業活動ログ向け」に書き直す
+- GAS `customer_master` 同期 Server Action（P0 の手動 INSERT を自動化）
+- GAS `activity_log` を Neon に snapshot ミラー（蓄積振り返り画面の素材）
+- 蓄積振り返り画面（時系列で温度遷移を表示）
+- 報告フォーマット生成（Markdown テンプレに `weekly_summary` を流し込み、上司報告作成を支援）
+- AI 機能組み込み（任意発展課題：「来週優先顧客」AI 提案、報告ドラフト生成）
+
+## 採用しなかった案（記録）
+
+設計で検討して却下した代替案を記録しておく（数週間後・数か月後の自分が再検討時にゼロから議論せずに済むように）。
+
+| 案 | 内容 | 却下理由 |
+|---|---|---|
+| 完全 DB 移行（GAS 廃止） | GAS を捨てて Neon 一本化 | 既存運用破壊、Google フォーム入力継続性を失う |
+| JSON ハイブリッド | DB なし、GAS から JSON を書き出して PR で反映 | 第7回課題「データを保存できる」要件に正面から答えない、スケールしない |
+| ローカル SQLite（Vercel 公開せず） | 公開せずローカル保存 | 公開課題と相性悪い、外部公開で講師に見せられない |
+| P0 に Pane 4「今日やる」UI 改修を含める | UI 改修を P0 に同梱 | Pane 4 設計が未確定、雑にやると手戻り（Layer 2 として P2 に分離） |
+| P1 で `customer_master` / `activity_log` も同期 | フル同期を前倒し | P0 直後は手戻りリスク、価値が薄い（P2 で実施） |
+| P1 で報告フォーマット生成も実装 | テンプレ化を前倒し | 実データを Neon で見てから設計する方が手戻り少ない（P3 で実施） |
 
 ## デプロイ
 
@@ -169,6 +196,16 @@ Vercel に接続済み（GitHub 連携、`main` ブランチへの push で自�
 
 - **Production URL**: https://sales-log-workspace.vercel.app/
 - Preview: 各PRごとに Vercel が自動生成
+
+### 環境変数（P0 以降）
+
+| 変数名 | 用途 | 設定タイミング |
+|---|---|---|
+| `DATABASE_URL` | Neon Postgres 接続文字列 | P0（Vercel ストレージ連携で自動設定される想定） |
+| `GOOGLE_SERVICE_ACCOUNT_KEY` | Google Sheets API サービスアカウント JSON（base64 等で1行化） | P1 |
+| `SHEETS_SPREADSHEET_ID` | GAS が書き込むスプレッドシートの ID | P1 |
+
+いずれもリポジトリにコミット禁止（CLAUDE.md「やらないこと」を参照）。ローカル開発時は `.env.local`（`.gitignore` 配下）に置く。
 
 ## 同梱スキル
 
@@ -189,6 +226,9 @@ Vercel に接続済み（GitHub 連携、`main` ブランチへの push で自�
 ## 関連リンク
 
 - 既存運用中の MVP（GAS版）: `personal-visual-explainers/.claude/skills/weekly-sales-log/`
-- 課題提出計画: `personal-visual-explainers/.claude/skills/weekly-sales-log/第5回6回課題_提出計画.md`
+- GAS MVP の現状まとめ: `personal-visual-explainers/.claude/skills/weekly-sales-log/現状まとめ.md`
+- 第5・6回 課題提出計画: `personal-visual-explainers/.claude/skills/weekly-sales-log/第5回6回課題_提出計画.md`
+- **第7回 課題方針確定（grill-me セッション結果）**: `personal-visual-explainers/.claude/skills/weekly-sales-log/引継ぎ_2026-06-07_第7回課題grill完了.md`
 - 第5回講義文字起こし: `ads-lecture/第5回講義_文字起こし.md`
 - 第6回講義文字起こし: `ads-lecture/第6回講義_文字起こし.md`
+- 第7回講義文字起こし: `ads-lecture/第7回講義_文字起こし.md`

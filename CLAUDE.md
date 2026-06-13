@@ -1,7 +1,8 @@
-# workspace-ui-kit
+# sales-log-workspace
 
-採用管理ドメインの **4ペイン Next.js 16 × shadcn/ui ワークスペース雛形**。
-受講生向けの動かし方・業種変更手順は README を参照。
+営業活動ログ用の **4ペイン Next.js 16 × shadcn/ui ワークスペース**（配布雛形 `workspace-ui-kit` をベースに営業ドメイン向けに retheme）。
+朝1分で「対応待ち顧客の状況把握」と「今日やる追客の優先順位決定」を完了するための画面。
+動かし方・段階定義（P0/P1/P2）・採用しなかった案は README を参照。
 
 ## 視覚 SSoT
 
@@ -50,6 +51,10 @@ IMPORTANT: 以下を守ること。
 - shadcn/ui（base-nova / `@base-ui/react`）
 - lucide-react（アイコン）
 - `zod`（ランタイム検証）
+- **Neon Postgres**（P0〜: 永続化バックエンド、Vercel ストレージ連携）
+- **Drizzle ORM**（P0〜: スキーマ・マイグレーション・型生成）
+- **Server Actions**（P0〜: Neon への読み書きエンドポイント）
+- **Google Sheets API（サービスアカウント認証）**（P1〜: GAS `weekly_summary` を手動同期で取り込む）
 
 ## コマンド
 
@@ -68,7 +73,25 @@ npm run check:radius # 角丸ドリフト検出
 - `CLAUDE.md` と `.claude/skills/*` は配布される（受講生環境の AI が読む）
 - 配布手順は親リポジトリの `managing-ads-gitea` スキルに従う
 
+## データ責任分界（実装時の最重要参照点）
+
+GAS MVP（既存運用中）と本ツールの責任を以下の通り分ける。実装時はこの表を必ず参照する。
+
+| データ種別 | SoT（正本） | 本ツール側の扱い |
+|---|---|---|
+| 入力フォーム生データ | GAS: `Form_Response` | 読まない |
+| 活動ログ追記 | GAS: `activity_log` | P2 で Neon に snapshot ミラー |
+| 週次集計 | GAS: `weekly_summary` | **P1 で Neon に snapshot ミラー**（手動「同期」ボタン） |
+| 顧客マスタ | GAS: `customer_master` | **P0 で Neon に手動 INSERT 8 社**（P2 以降で GAS 同期に切替） |
+| 「次回アクション」 | **Neon のみ**（ツール固有データ） | **P0 で読み書き** |
+| 報告フォーマットテンプレ | リポジトリ内 Markdown | P2/P3 で実装 |
+
+入力は **Google フォームを SoT** として維持する（GAS が「入力 → 蓄積」、本ツールが「閲覧 + 報告組み立て」を担当）。GAS MVP の現状は `personal-visual-explainers/.claude/skills/weekly-sales-log/現状まとめ.md` を参照。
+
 ## やらないこと
 
-- DB 接続・認証（次フェーズ）
+- **ツール上で接触記録を新規入力する機能を追加しない**（Google フォームに誘導。入力チャネルの二重化はデータ整合性を壊す）
+- **`customers.name` を GAS `customer_master.official_name` 以外で命名しない**（P1 で同期に切り替えた時にズレる）
+- **Pane 4 inline 編集（`EditableScorecardKey` 等、雛形由来）を永続化しない**（`useState` のまま放置。入力チャネル二重化の防止）
+- **Neon 接続文字列・サービスアカウント JSON キーをリポジトリにコミットしない**（環境変数のみ。`.env.local` は `.gitignore` 配下を維持）
 - `react-beautiful-dnd`（廃止ライブラリ）への置き換え
