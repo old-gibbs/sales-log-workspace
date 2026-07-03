@@ -33,6 +33,7 @@ import {
   type StageStatus,
   type Scorecard,
   type SelectedDetail,
+  type CustomerNextActionItem,
   STAGE_ORDER,
 } from "@/lib/schema";
 import { STAGE_LABELS, PANE3_SECTION, PANE4_SECTION_IDS } from "@/lib/labels";
@@ -68,6 +69,7 @@ import {
   SectionLabel,
   type ComboOption,
 } from "@/components/primitives";
+import { NextActionCard } from "@/components/workspace/NextActionCard";
 
 // ===== AxisScoreRow（Pane 4 モード 2 でも使う、export） =====
 
@@ -644,6 +646,7 @@ export function CandidateDashboardPane({
   applicationInfoOpen,
   onApplicationInfoOpenChange,
   selectedCandidateId,
+  openNextAction,
 }: {
   profile: Profile;
   scorecards: Scorecard[];
@@ -653,6 +656,7 @@ export function CandidateDashboardPane({
   applicationInfoOpen: boolean;
   onApplicationInfoOpenChange: (open: boolean) => void;
   selectedCandidateId: string;
+  openNextAction: CustomerNextActionItem | null;
 }) {
   return (
     <section className="min-w-0 flex-1 bg-canvas">
@@ -669,6 +673,12 @@ export function CandidateDashboardPane({
           />
 
           <RecruitingConditionsCard profile={profile} setProfile={setProfile} />
+
+          <NextActionCard
+            key={selectedCandidateId}
+            customerId={selectedCandidateId}
+            initialAction={openNextAction}
+          />
 
           <ScreeningFlowListCard
             scorecards={scorecards}

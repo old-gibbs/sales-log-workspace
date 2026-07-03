@@ -49,7 +49,9 @@ export const PANE3_SECTION = {
   applicationInfo: "顧客基本情報",
   recruitingConditions: "想定条件（予算・導入時期）",
   screeningFlow: "接触履歴",
-  screeningFlowDescription: "過去の接触記録と次回アクション",
+  screeningFlowDescription: "過去の接触記録",
+  nextAction: "次回アクション",
+  nextActionDescription: "追客メモと期限（Neon に保存）",
 } as const;
 
 // ===== Pane 4 セクション id（ADR-0015 §19 でモード 1 廃止、m2 のみ） =====

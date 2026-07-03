@@ -50,6 +50,7 @@ import {
   type Candidate,
   type Group,
   type SelectedDetail,
+  type NextActionsByCustomerId,
   STAGE_ORDER,
 } from "@/lib/schema";
 import {
@@ -94,18 +95,24 @@ type EditableScorecardKey =
 type WorkspaceProps = {
   initialDepartments: Department[];
   initialCandidates: Candidate[];
+  initialNextActionsByCustomerId: NextActionsByCustomerId;
   workspace: { name: string; icon: string };
 };
 
 export function Workspace({
   initialDepartments,
   initialCandidates,
+  initialNextActionsByCustomerId,
   workspace,
 }: WorkspaceProps) {
   const [departments, setDepartments] =
     useState<Department[]>(initialDepartments);
   const [candidates, setCandidates] = useState<Candidate[]>(initialCandidates);
-  const [selectedCandidateId, setSelectedCandidateId] = useState<string>("c2");
+  const [selectedCandidateId, setSelectedCandidateId] = useState<string>(() => {
+    const defaultCandidate =
+      initialCandidates.find((c) => !c.archived) ?? initialCandidates[0];
+    return defaultCandidate?.id ?? "";
+  });
   const [selectedDetail, setSelectedDetail] = useState<SelectedDetail>(null);
   const [scrollAnchor, setScrollAnchor] = useState<string | null>(null);
   // ユーザーが手動で Pane 4 を畳んだか。ステージ選択は保持しつつ畳む用途。
@@ -124,6 +131,8 @@ export function Workspace({
     candidates.find((c) => c.id === selectedCandidateId) ?? candidates[0];
   const profile = activeCandidate.profile;
   const scorecards = activeCandidate.scorecards;
+  const openNextAction =
+    initialNextActionsByCustomerId[selectedCandidateId] ?? null;
 
   // Mode1ProfileDetail は `setProfile: React.Dispatch<React.SetStateAction<Profile>>`
   // を期待している（採用案 X）。子コンポーネント側の signature を変えないために、
@@ -440,6 +449,7 @@ export function Workspace({
             applicationInfoOpen={applicationInfoOpen}
             onApplicationInfoOpenChange={setApplicationInfoOpen}
             selectedCandidateId={selectedCandidateId}
+            openNextAction={openNextAction}
           />
           <CandidateDetailPane
             selectedCandidateId={selectedCandidateId}

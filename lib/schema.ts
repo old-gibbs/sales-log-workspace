@@ -220,3 +220,20 @@ export type CandidateRow = {
 export type Group =
   | { kind: "stage"; stage: StageKey; label: string; items: CandidateRow[] }
   | { kind: "archived"; label: string; items: CandidateRow[] };
+
+// ===== 次回アクション（Neon customer_next_actions） =====
+
+/** UI / Server Action 間でやり取りする次回アクションの形。 */
+export type CustomerNextActionItem = {
+  id: string;
+  customerId: string;
+  body: string;
+  dueDate: string | null;
+  isDone: boolean;
+};
+
+/** 顧客 ID → 未完了の最新次回アクション（なければ null）。 */
+export type NextActionsByCustomerId = Record<
+  string,
+  CustomerNextActionItem | null
+>;

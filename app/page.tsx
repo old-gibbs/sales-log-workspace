@@ -1,34 +1,45 @@
 import { Workspace } from "@/components/workspace/Workspace";
 import positionsData from "@/data/positions.json";
-import candidatesData from "@/data/candidates.json";
 import workspaceData from "@/data/workspace.json";
-import {
-  departmentsSchema,
-  candidatesSchema,
-  workspaceSchema,
-} from "@/lib/schema";
+import { loadCandidates } from "@/lib/data/load-candidates";
+import { loadOpenNextActionsByCustomerId } from "@/lib/data/load-next-actions";
+import { departmentsSchema, workspaceSchema } from "@/lib/schema";
 
-export default function Page() {
-  const deptResult = departmentsSchema.safeParse(positionsData);
-  const candResult = candidatesSchema.safeParse(candidatesData);
-  const wsResult = workspaceSchema.safeParse(workspaceData);
+export const dynamic = "force-dynamic";
 
-  if (!deptResult.success || !candResult.success || !wsResult.success) {
+export default async function Page() {
+  const initialCandidates = await loadCandidates();
+  const [deptResult, wsResult] = await Promise.all([
+    Promise.resolve(departmentsSchema.safeParse(positionsData)),
+    Promise.resolve(workspaceSchema.safeParse(workspaceData)),
+  ]);
+
+  if (!deptResult.success || !wsResult.success) {
     const errors = [
       !deptResult.success &&
         `positions.json: ${deptResult.error.issues[0]?.message}`,
-      !candResult.success &&
-        `candidates.json: ${candResult.error.issues[0]?.message}`,
       !wsResult.success &&
         `workspace.json: ${wsResult.error.issues[0]?.message}`,
     ].filter(Boolean);
     throw new Error(`データの形式が正しくありません:\n${errors.join("\n")}`);
   }
 
+  if (initialCandidates.length === 0) {
+    throw new Error(
+      "顧客データが 0 件です。Neon の customers テーブルと data/candidates.json の name が一致しているか確認してください。",
+    );
+  }
+
+  const initialNextActionsByCustomerId =
+    await loadOpenNextActionsByCustomerId(
+      initialCandidates.map((candidate) => candidate.id),
+    );
+
   return (
     <Workspace
       initialDepartments={deptResult.data}
-      initialCandidates={candResult.data}
+      initialCandidates={initialCandidates}
+      initialNextActionsByCustomerId={initialNextActionsByCustomerId}
       workspace={wsResult.data}
     />
   );
