@@ -1,0 +1,121 @@
+{
+  "candidateJsonId": "c6",
+  "customerName": "株式会社上州フレッシュファーム",
+  "itemCount": 37,
+  "supplierCount": 17,
+  "latestShipDate": "2026-06-15",
+  "topCategories": [
+    {
+      "code": "07",
+      "label": "食品トレー・ボンドン",
+      "count": 9
+    },
+    {
+      "code": "09",
+      "label": "シーリング・ラップ",
+      "count": 8
+    },
+    {
+      "code": "14",
+      "label": "袋・包装紙",
+      "count": 4
+    },
+    {
+      "code": "06",
+      "label": "計量・包装機器",
+      "count": 3
+    }
+  ],
+  "items": [
+    {
+      "itemCode": "714887",
+      "itemName": "サーマルW43×P25無地",
+      "categoryCode": "09",
+      "categoryLabel": "シーリング・ラップ",
+      "sellPrice": 0.99,
+      "lastShipDate": "2026-06-15",
+      "supplierLabel": "仕入先J"
+    },
+    {
+      "itemCode": "592494",
+      "itemName": "L-255キンセンメロン2コイリ",
+      "categoryCode": "14",
+      "categoryLabel": "袋・包装紙",
+      "sellPrice": 334,
+      "lastShipDate": "2026-05-21",
+      "supplierLabel": "仕入先O"
+    },
+    {
+      "itemCode": "081276",
+      "itemName": "PPバンドSB15*2500　黄",
+      "categoryCode": "17",
+      "categoryLabel": "その他",
+      "sellPrice": 5356,
+      "lastShipDate": "2026-05-14",
+      "supplierLabel": "仕入先Q"
+    },
+    {
+      "itemCode": "304494",
+      "itemName": "サーマル55×42無地",
+      "categoryCode": "09",
+      "categoryLabel": "シーリング・ラップ",
+      "sellPrice": 1.11,
+      "lastShipDate": "2026-05-02",
+      "supplierLabel": "仕入先N"
+    },
+    {
+      "itemCode": "370148",
+      "itemName": "サーマルW40×P452色印刷",
+      "categoryCode": "09",
+      "categoryLabel": "シーリング・ラップ",
+      "sellPrice": 1.09,
+      "lastShipDate": "2026-05-01",
+      "supplierLabel": "仕入先M"
+    },
+    {
+      "itemCode": "226281",
+      "itemName": "ハイパ-ボ-ドンNO94Hプラ",
+      "categoryCode": "07",
+      "categoryLabel": "食品トレー・ボンドン",
+      "sellPrice": 2.14,
+      "lastShipDate": "2026-04-30",
+      "supplierLabel": "仕入先F"
+    },
+    {
+      "itemCode": "242187",
+      "itemName": "ハイパー防曇#20No134Hプラマーク入り",
+      "categoryCode": "07",
+      "categoryLabel": "食品トレー・ボンドン",
+      "sellPrice": 3.69,
+      "lastShipDate": "2026-04-30",
+      "supplierLabel": "仕入先F"
+    },
+    {
+      "itemCode": "586376",
+      "itemName": "ハイパーボードン#20No124Hプラ",
+      "categoryCode": "07",
+      "categoryLabel": "食品トレー・ボンドン",
+      "sellPrice": 3.15,
+      "lastShipDate": "2026-04-30",
+      "supplierLabel": "仕入先F"
+    },
+    {
+      "itemCode": "226284",
+      "itemName": "ハイパ-ボ-ドンNO104Hプ",
+      "categoryCode": "07",
+      "categoryLabel": "食品トレー・ボンドン",
+      "sellPrice": 2.19,
+      "lastShipDate": "2026-04-30",
+      "supplierLabel": "仕入先F"
+    },
+    {
+      "itemCode": "681233",
+      "itemName": "ハイパーボードン#20No114Hプラ",
+      "categoryCode": "07",
+      "categoryLabel": "食品トレー・ボンドン",
+      "sellPrice": 2.4,
+      "lastShipDate": "2026-04-30",
+      "supplierLabel": "仕入先F"
+    }
+  ]
+}

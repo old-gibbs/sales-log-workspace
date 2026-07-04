@@ -1,0 +1,121 @@
+{
+  "candidateJsonId": "c7",
+  "customerName": "株式会社赤城ベーカリー",
+  "itemCount": 84,
+  "supplierCount": 26,
+  "latestShipDate": "2026-07-03",
+  "topCategories": [
+    {
+      "code": "08",
+      "label": "ラベル・シール",
+      "count": 22
+    },
+    {
+      "code": "30",
+      "label": "雑品",
+      "count": 22
+    },
+    {
+      "code": "07",
+      "label": "食品トレー・ボンドン",
+      "count": 17
+    },
+    {
+      "code": "11",
+      "label": "調理・厨房資材",
+      "count": 7
+    }
+  ],
+  "items": [
+    {
+      "itemCode": "407501",
+      "itemName": "カミトレ-13ゴウクロ",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 32.5,
+      "lastShipDate": "2026-07-03",
+      "supplierLabel": "仕入先B"
+    },
+    {
+      "itemCode": "669590",
+      "itemName": "ニトリル手袋Mブル-粉無し#2042",
+      "categoryCode": "30",
+      "categoryLabel": "雑品",
+      "sellPrice": 1114,
+      "lastShipDate": "2026-06-30",
+      "supplierLabel": "仕入先Y"
+    },
+    {
+      "itemCode": "218499",
+      "itemName": "シャボネットユ・ム1K",
+      "categoryCode": "30",
+      "categoryLabel": "雑品",
+      "sellPrice": 1471,
+      "lastShipDate": "2026-06-29",
+      "supplierLabel": "仕入先V"
+    },
+    {
+      "itemCode": "271781",
+      "itemName": "クラフトテ-プ50*50チャSキ",
+      "categoryCode": "17",
+      "categoryLabel": "その他",
+      "sellPrice": 246,
+      "lastShipDate": "2026-06-22",
+      "supplierLabel": "仕入先Q"
+    },
+    {
+      "itemCode": "416792",
+      "itemName": "エスコンUL-71身",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 11.6,
+      "lastShipDate": "2026-06-19",
+      "supplierLabel": "仕入先A"
+    },
+    {
+      "itemCode": "574064",
+      "itemName": "エスコン71蓋　透明",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 12.1,
+      "lastShipDate": "2026-06-19",
+      "supplierLabel": "仕入先A"
+    },
+    {
+      "itemCode": "266307",
+      "itemName": "エリエールイ-ナトイレット100M*12R21001138",
+      "categoryCode": "30",
+      "categoryLabel": "雑品",
+      "sellPrice": 977,
+      "lastShipDate": "2026-06-19",
+      "supplierLabel": "仕入先U"
+    },
+    {
+      "itemCode": "562857",
+      "itemName": "PP袋NO311",
+      "categoryCode": "08",
+      "categoryLabel": "ラベル・シール",
+      "sellPrice": 5.29,
+      "lastShipDate": "2026-06-15",
+      "supplierLabel": "仕入先G"
+    },
+    {
+      "itemCode": "081276",
+      "itemName": "PPバンドSB15*2500　黄",
+      "categoryCode": "17",
+      "categoryLabel": "その他",
+      "sellPrice": 6641,
+      "lastShipDate": "2026-06-10",
+      "supplierLabel": "仕入先O"
+    },
+    {
+      "itemCode": "198157",
+      "itemName": "プチプチd37430*260",
+      "categoryCode": "30",
+      "categoryLabel": "雑品",
+      "sellPrice": 13.1,
+      "lastShipDate": "2026-06-08",
+      "supplierLabel": "仕入先X"
+    }
+  ]
+}

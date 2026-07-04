@@ -1,14 +1,15 @@
 import { describe, it, expect } from "vitest";
 
-import {
-  candidatesSchema,
-  departmentsSchema,
-  workspaceSchema,
-} from "@/lib/schema";
-
 import positionsData from "@/data/positions.json";
 import candidatesData from "@/data/candidates.json";
 import workspaceData from "@/data/workspace.json";
+import c1Ledger from "@/data/ledger/c1.json";
+import {
+  candidatesSchema,
+  customerLedgerSchema,
+  departmentsSchema,
+  workspaceSchema,
+} from "@/lib/schema";
 
 describe("data/*.json schema validation", () => {
   it("data/positions.json は departmentsSchema を満たす", () => {
@@ -24,6 +25,15 @@ describe("data/*.json schema validation", () => {
   it("data/workspace.json は workspaceSchema を満たす", () => {
     const result = workspaceSchema.safeParse(workspaceData);
     expect(result.success).toBe(true);
+  });
+
+  it("data/ledger/c1.json は customerLedgerSchema を満たす", () => {
+    const result = customerLedgerSchema.safeParse(c1Ledger);
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect(result.data.items.length).toBeGreaterThan(0);
+      expect(result.data.items.length).toBeLessThanOrEqual(10);
+    }
   });
 });
 

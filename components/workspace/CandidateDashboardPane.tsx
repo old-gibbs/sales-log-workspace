@@ -34,14 +34,20 @@ import {
   type Scorecard,
   type SelectedDetail,
   type CustomerNextActionItem,
+  type CustomerLedger,
+  type StageKey,
   STAGE_ORDER,
 } from "@/lib/schema";
-import { STAGE_LABELS, PANE3_SECTION, PANE4_SECTION_IDS } from "@/lib/labels";
+import {
+  STAGE_LABELS,
+  PANE3_SECTION,
+  PANE4_SECTION_IDS,
+  PROFILE_FIELD,
+} from "@/lib/labels";
 import {
   getScorecardsAverageScore,
   deriveStageStatus,
 } from "@/lib/computed/scorecards";
-import { calculateAge } from "@/lib/computed/profile";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -70,6 +76,8 @@ import {
   type ComboOption,
 } from "@/components/primitives";
 import { NextActionCard } from "@/components/workspace/NextActionCard";
+import { LedgerItemsCard } from "@/components/workspace/LedgerItemsCard";
+import { WeeklyActionCard } from "@/components/workspace/WeeklyActionCard";
 
 // ===== AxisScoreRow（Pane 4 モード 2 でも使う、export） =====
 
@@ -258,7 +266,7 @@ function RecruitingConditionsCard({
                 <InlineTextField
                   value={profile.desiredSalaryMin}
                   onSave={(v) => updateField("desiredSalaryMin", v)}
-                  ariaLabel="想定予算（下限）"
+                  ariaLabel={PROFILE_FIELD.budgetMin}
                   placeholder="—"
                 />
               </div>
@@ -267,20 +275,20 @@ function RecruitingConditionsCard({
                 <InlineTextField
                   value={profile.desiredSalaryMax}
                   onSave={(v) => updateField("desiredSalaryMax", v)}
-                  ariaLabel="想定予算（上限）"
+                  ariaLabel={PROFILE_FIELD.budgetMax}
                   placeholder="—"
                 />
               </div>
               <span className="shrink-0 text-xs text-muted-foreground">
-                万円
+                {PROFILE_FIELD.budgetUnit}
               </span>
             </div>
           </InlineFieldRow>
-          <InlineFieldRow label="導入想定日">
+          <InlineFieldRow label={PROFILE_FIELD.availableStartDate}>
             <InlineDateField
               value={profile.availableStartDate}
               onSave={(v) => updateField("availableStartDate", v)}
-              ariaLabel="導入想定日"
+              ariaLabel={PROFILE_FIELD.availableStartDate}
             />
           </InlineFieldRow>
         </dl>
@@ -453,44 +461,36 @@ function ApplicationInfoCardContent({
 
   return (
     <div className="flex flex-col">
-      {/* 基本（名前 / 生年月日 / 応募経路 / 採用担当） — Card タイトル「応募情報」が見出しを兼ねる */}
       <section className="flex flex-col gap-3 pb-4">
         <dl className="flex flex-col gap-2.5 text-sm">
-          <InlineFieldRow label="名前">
+          <InlineFieldRow label={PROFILE_FIELD.name}>
             <InlineTextField
               value={profile.name}
               onSave={(v) => updateField("name", v)}
-              ariaLabel="名前"
+              ariaLabel={PROFILE_FIELD.name}
             />
           </InlineFieldRow>
-          <InlineFieldRow label="登録日">
-            <div className="flex items-center gap-2">
-              <div className="flex-1">
-                <InlineDateField
-                  value={profile.birthday}
-                  onSave={(v) => updateField("birthday", v)}
-                  ariaLabel="登録日"
-                />
-              </div>
-              <span className="shrink-0 text-xs text-muted-foreground">
-                {calculateAge(profile.birthday)}
-              </span>
-            </div>
+          <InlineFieldRow label={PROFILE_FIELD.firstContactDate}>
+            <InlineDateField
+              value={profile.birthday}
+              onSave={(v) => updateField("birthday", v)}
+              ariaLabel={PROFILE_FIELD.firstContactDate}
+            />
           </InlineFieldRow>
-          <InlineFieldRow label="流入経路">
+          <InlineFieldRow label={PROFILE_FIELD.source}>
             <InlineComboboxField
               value={profile.source}
               options={sourceOptions}
               onSave={(v) => updateField("source", v)}
               onCreate={handleAddSource}
-              ariaLabel="流入経路"
+              ariaLabel={PROFILE_FIELD.source}
             />
           </InlineFieldRow>
-          <InlineFieldRow label="自社担当">
+          <InlineFieldRow label={PROFILE_FIELD.recruiter}>
             <InlineTextField
               value={profile.recruiter}
               onSave={(v) => updateField("recruiter", v)}
-              ariaLabel="自社担当"
+              ariaLabel={PROFILE_FIELD.recruiter}
             />
           </InlineFieldRow>
         </dl>
@@ -498,34 +498,33 @@ function ApplicationInfoCardContent({
 
       <Separator />
 
-      {/* 連絡先 */}
       <section className="flex flex-col gap-3 py-4">
-        <SectionLabel>連絡先</SectionLabel>
+        <SectionLabel>{PROFILE_FIELD.contactSection}</SectionLabel>
         <ul className="flex flex-col gap-2.5">
           <ContactRow
             icon={<Mail className="size-3.5" />}
-            label="メールアドレス"
+            label={PROFILE_FIELD.email}
           >
             <InlineTextField
               value={profile.email}
               onSave={(v) => updateField("email", v)}
-              ariaLabel="メールアドレス"
+              ariaLabel={PROFILE_FIELD.email}
               inputType="email"
             />
           </ContactRow>
-          <ContactRow icon={<Phone className="size-3.5" />} label="電話番号">
+          <ContactRow icon={<Phone className="size-3.5" />} label={PROFILE_FIELD.phone}>
             <InlineTextField
               value={profile.phone}
               onSave={(v) => updateField("phone", v)}
-              ariaLabel="電話番号"
+              ariaLabel={PROFILE_FIELD.phone}
               inputType="tel"
             />
           </ContactRow>
-          <ContactRow icon={<MapPin className="size-3.5" />} label="住所">
+          <ContactRow icon={<MapPin className="size-3.5" />} label={PROFILE_FIELD.address}>
             <InlineTextField
               value={profile.address}
               onSave={(v) => updateField("address", v)}
-              ariaLabel="住所"
+              ariaLabel={PROFILE_FIELD.address}
             />
           </ContactRow>
         </ul>
@@ -533,25 +532,23 @@ function ApplicationInfoCardContent({
 
       <Separator />
 
-      {/* 職務経歴 */}
       <section className="flex flex-col gap-2 py-4">
-        <SectionLabel>職務経歴</SectionLabel>
+        <SectionLabel>{PROFILE_FIELD.activityTimeline}</SectionLabel>
         <InlineTextareaField
           value={profile.careerText}
           onSave={(v) => updateField("careerText", v)}
-          ariaLabel="職務経歴"
+          ariaLabel={PROFILE_FIELD.activityTimeline}
         />
       </section>
 
       <Separator />
 
-      {/* 志望動機 */}
       <section className="flex flex-col gap-2 pt-4">
-        <SectionLabel>志望動機</SectionLabel>
+        <SectionLabel>{PROFILE_FIELD.backgroundAndNeeds}</SectionLabel>
         <InlineTextareaField
           value={profile.motivationFull}
           onSave={(v) => updateField("motivationFull", v)}
-          ariaLabel="志望動機"
+          ariaLabel={PROFILE_FIELD.backgroundAndNeeds}
         />
       </section>
     </div>
@@ -623,10 +620,14 @@ function CandidateHeader({
       </Avatar>
       <div className="flex min-w-0 flex-1 flex-col gap-1">
         <h2 className="font-heading truncate text-xl font-semibold text-foreground">
-          {profile.name || "名前未設定"}
+          {profile.name || "顧客名未設定"}
         </h2>
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
-          {profile.birthday && <span>{calculateAge(profile.birthday)}</span>}
+          {profile.birthday && (
+            <span>
+              {PROFILE_FIELD.firstContactDate} {profile.birthday}
+            </span>
+          )}
           {profile.birthday && <span aria-hidden="true">·</span>}
           <ScoreLabel value={getScorecardsAverageScore(scorecards)} />
         </div>
@@ -645,8 +646,13 @@ export function CandidateDashboardPane({
   setProfile,
   applicationInfoOpen,
   onApplicationInfoOpenChange,
+  ledgerItemsOpen,
+  onLedgerItemsOpenChange,
   selectedCandidateId,
+  candidateStage,
+  candidateArchived,
   openNextAction,
+  ledger,
 }: {
   profile: Profile;
   scorecards: Scorecard[];
@@ -655,8 +661,13 @@ export function CandidateDashboardPane({
   setProfile: React.Dispatch<React.SetStateAction<Profile>>;
   applicationInfoOpen: boolean;
   onApplicationInfoOpenChange: (open: boolean) => void;
+  ledgerItemsOpen: boolean;
+  onLedgerItemsOpenChange: (open: boolean) => void;
   selectedCandidateId: string;
+  candidateStage: StageKey;
+  candidateArchived: boolean;
   openNextAction: CustomerNextActionItem | null;
+  ledger: CustomerLedger | null;
 }) {
   return (
     <section className="min-w-0 flex-1 bg-canvas">
@@ -673,6 +684,21 @@ export function CandidateDashboardPane({
           />
 
           <RecruitingConditionsCard profile={profile} setProfile={setProfile} />
+
+          <LedgerItemsCard
+            ledger={ledger}
+            open={ledgerItemsOpen}
+            onOpenChange={onLedgerItemsOpenChange}
+            candidateKey={selectedCandidateId}
+          />
+
+          <WeeklyActionCard
+            stage={candidateStage}
+            archived={candidateArchived}
+            scorecards={scorecards}
+            availableStartDate={profile.availableStartDate}
+            openNextAction={openNextAction}
+          />
 
           <NextActionCard
             key={selectedCandidateId}

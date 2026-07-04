@@ -1,0 +1,121 @@
+{
+  "candidateJsonId": "c8",
+  "customerName": "株式会社つくば農産",
+  "itemCount": 22,
+  "supplierCount": 14,
+  "latestShipDate": "2026-04-17",
+  "topCategories": [
+    {
+      "code": "01",
+      "label": "真空パック・梱包材",
+      "count": 8
+    },
+    {
+      "code": "12",
+      "label": "ギフト箱",
+      "count": 3
+    },
+    {
+      "code": "30",
+      "label": "雑品",
+      "count": 3
+    },
+    {
+      "code": "09",
+      "label": "シーリング・ラップ",
+      "count": 2
+    }
+  ],
+  "items": [
+    {
+      "itemCode": "196115",
+      "itemName": "帯紙イチゴノトリコいちご大福",
+      "categoryCode": "11",
+      "categoryLabel": "調理・厨房資材",
+      "sellPrice": 15.2,
+      "lastShipDate": "2026-04-17",
+      "supplierLabel": "仕入先I"
+    },
+    {
+      "itemCode": "115960",
+      "itemName": "フル-ツケ-スFC-365",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 4.64,
+      "lastShipDate": "2026-03-24",
+      "supplierLabel": "仕入先C"
+    },
+    {
+      "itemCode": "790157",
+      "itemName": "イチゴトレ-FC-210",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 4.6,
+      "lastShipDate": "2026-03-24",
+      "supplierLabel": "仕入先C"
+    },
+    {
+      "itemCode": "673191",
+      "itemName": "フルーツケースFC-375",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 4.71,
+      "lastShipDate": "2026-03-24",
+      "supplierLabel": "仕入先C"
+    },
+    {
+      "itemCode": "930790",
+      "itemName": "フレッシュ園渡辺イチゴノトリコカップ用40パイ",
+      "categoryCode": "09",
+      "categoryLabel": "シーリング・ラップ",
+      "sellPrice": 2.14,
+      "lastShipDate": "2026-03-24",
+      "supplierLabel": "仕入先H"
+    },
+    {
+      "itemCode": "582388",
+      "itemName": "A-F18",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 8.75,
+      "lastShipDate": "2026-03-19",
+      "supplierLabel": "仕入先A"
+    },
+    {
+      "itemCode": "276592",
+      "itemName": "半自動梱包機IQ-400",
+      "categoryCode": "06",
+      "categoryLabel": "計量・包装機器",
+      "sellPrice": 188552,
+      "lastShipDate": "2026-03-19",
+      "supplierLabel": "仕入先E"
+    },
+    {
+      "itemCode": "465685",
+      "itemName": "訂正ラベル7×30地白文字　緑",
+      "categoryCode": "09",
+      "categoryLabel": "シーリング・ラップ",
+      "sellPrice": 1.56,
+      "lastShipDate": "2026-03-10",
+      "supplierLabel": "仕入先G"
+    },
+    {
+      "itemCode": "081276",
+      "itemName": "PPバンドSB15*2500　黄",
+      "categoryCode": "17",
+      "categoryLabel": "その他",
+      "sellPrice": 5088,
+      "lastShipDate": "2026-03-06",
+      "supplierLabel": "仕入先K"
+    },
+    {
+      "itemCode": "763245",
+      "itemName": "苺ロール1色とちあいか伊集院ファーム",
+      "categoryCode": "08",
+      "categoryLabel": "ラベル・シール",
+      "sellPrice": 8070,
+      "lastShipDate": "2026-03-04",
+      "supplierLabel": "仕入先F"
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "candidateJsonId": "c2",
+  "customerName": "株式会社カシマ水産加工",
+  "itemCount": 74,
+  "supplierCount": 34,
+  "latestShipDate": "2026-07-06",
+  "topCategories": [
+    {
+      "code": "30",
+      "label": "雑品",
+      "count": 23
+    },
+    {
+      "code": "01",
+      "label": "真空パック・梱包材",
+      "count": 12
+    },
+    {
+      "code": "08",
+      "label": "ラベル・シール",
+      "count": 10
+    },
+    {
+      "code": "07",
+      "label": "食品トレー・ボンドン",
+      "count": 6
+    }
+  ],
+  "items": [
+    {
+      "itemCode": "100806",
+      "itemName": "BCMP13-TC蓋",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 8.88,
+      "lastShipDate": "2026-07-06",
+      "supplierLabel": "仕入先A"
+    },
+    {
+      "itemCode": "365710",
+      "itemName": "BCMP13-430",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 12.4,
+      "lastShipDate": "2026-07-06",
+      "supplierLabel": "仕入先A"
+    },
+    {
+      "itemCode": "386085",
+      "itemName": "三角袋無地90*320",
+      "categoryCode": "08",
+      "categoryLabel": "ラベル・シール",
+      "sellPrice": 11.9,
+      "lastShipDate": "2026-07-06",
+      "supplierLabel": "仕入先K"
+    },
+    {
+      "itemCode": "149297",
+      "itemName": "ユポサーマル60×60無地1000枚/巻",
+      "categoryCode": "09",
+      "categoryLabel": "シーリング・ラップ",
+      "sellPrice": 2484,
+      "lastShipDate": "2026-07-03",
+      "supplierLabel": "仕入先G"
+    },
+    {
+      "itemCode": "361944",
+      "itemName": "ディーナプロ300中150*2",
+      "categoryCode": "11",
+      "categoryLabel": "調理・厨房資材",
+      "sellPrice": 1243,
+      "lastShipDate": "2026-07-03",
+      "supplierLabel": "仕入先N"
+    },
+    {
+      "itemCode": "292037",
+      "itemName": "オカズノサト1",
+      "categoryCode": "30",
+      "categoryLabel": "雑品",
+      "sellPrice": 1182,
+      "lastShipDate": "2026-07-03",
+      "supplierLabel": "仕入先E"
+    },
+    {
+      "itemCode": "586018",
+      "itemName": "三角袋ツナマヨ90*320",
+      "categoryCode": "08",
+      "categoryLabel": "ラベル・シール",
+      "sellPrice": 13,
+      "lastShipDate": "2026-06-26",
+      "supplierLabel": "仕入先K"
+    },
+    {
+      "itemCode": "197909",
+      "itemName": "エルフォーレトイレット12RW21001826",
+      "categoryCode": "30",
+      "categoryLabel": "雑品",
+      "sellPrice": 511,
+      "lastShipDate": "2026-06-26",
+      "supplierLabel": "仕入先G"
+    },
+    {
+      "itemCode": "427683",
+      "itemName": "食品シ-トNO.6",
+      "categoryCode": "07",
+      "categoryLabel": "食品トレー・ボンドン",
+      "sellPrice": 3.41,
+      "lastShipDate": "2026-06-23",
+      "supplierLabel": "仕入先I"
+    },
+    {
+      "itemCode": "478784",
+      "itemName": "食品シ-トNO.40新",
+      "categoryCode": "07",
+      "categoryLabel": "食品トレー・ボンドン",
+      "sellPrice": 9.48,
+      "lastShipDate": "2026-06-19",
+      "supplierLabel": "仕入先I"
+    }
+  ]
+}

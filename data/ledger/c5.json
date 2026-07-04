@@ -1,0 +1,121 @@
+{
+  "candidateJsonId": "c5",
+  "customerName": "株式会社ナスノミート",
+  "itemCount": 100,
+  "supplierCount": 31,
+  "latestShipDate": "2026-07-06",
+  "topCategories": [
+    {
+      "code": "30",
+      "label": "雑品",
+      "count": 30
+    },
+    {
+      "code": "16",
+      "label": "店舗什器",
+      "count": 14
+    },
+    {
+      "code": "17",
+      "label": "その他",
+      "count": 12
+    },
+    {
+      "code": "07",
+      "label": "食品トレー・ボンドン",
+      "count": 11
+    }
+  ],
+  "items": [
+    {
+      "itemCode": "075211",
+      "itemName": "COPN-CF12-30",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 8.42,
+      "lastShipDate": "2026-07-06",
+      "supplierLabel": "仕入先A"
+    },
+    {
+      "itemCode": "003516",
+      "itemName": "W-PHマット65×80",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 3.9,
+      "lastShipDate": "2026-07-06",
+      "supplierLabel": "仕入先B"
+    },
+    {
+      "itemCode": "075211",
+      "itemName": "COPN-CF12-30",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 8.42,
+      "lastShipDate": "2026-07-06",
+      "supplierLabel": "仕入先A"
+    },
+    {
+      "itemCode": "251804",
+      "itemName": "レバースライス三方袋220*300",
+      "categoryCode": "08",
+      "categoryLabel": "ラベル・シール",
+      "sellPrice": 19.2,
+      "lastShipDate": "2026-07-06",
+      "supplierLabel": "仕入先J"
+    },
+    {
+      "itemCode": "251804",
+      "itemName": "レバースライス三方袋220*300",
+      "categoryCode": "08",
+      "categoryLabel": "ラベル・シール",
+      "sellPrice": 19.2,
+      "lastShipDate": "2026-07-06",
+      "supplierLabel": "仕入先J"
+    },
+    {
+      "itemCode": "143141",
+      "itemName": "ミートフーズユポ60*45",
+      "categoryCode": "09",
+      "categoryLabel": "シーリング・ラップ",
+      "sellPrice": 5251,
+      "lastShipDate": "2026-07-06",
+      "supplierLabel": "仕入先C"
+    },
+    {
+      "itemCode": "151929",
+      "itemName": "タウパーマックスSサイズ50711",
+      "categoryCode": "30",
+      "categoryLabel": "雑品",
+      "sellPrice": 93.6,
+      "lastShipDate": "2026-07-02",
+      "supplierLabel": "仕入先C"
+    },
+    {
+      "itemCode": "702875",
+      "itemName": "ナイロンポリTLタイプ22-30F",
+      "categoryCode": "08",
+      "categoryLabel": "ラベル・シール",
+      "sellPrice": 18.7,
+      "lastShipDate": "2026-07-01",
+      "supplierLabel": "仕入先E"
+    },
+    {
+      "itemCode": "232651",
+      "itemName": "イシダ塩ビラップ350×1000M",
+      "categoryCode": "02",
+      "categoryLabel": "衛生・消耗品",
+      "sellPrice": 14687,
+      "lastShipDate": "2026-06-30",
+      "supplierLabel": "仕入先C"
+    },
+    {
+      "itemCode": "232651",
+      "itemName": "イシダ塩ビラップ350×1000M",
+      "categoryCode": "02",
+      "categoryLabel": "衛生・消耗品",
+      "sellPrice": 14687,
+      "lastShipDate": "2026-06-30",
+      "supplierLabel": "仕入先C"
+    }
+  ]
+}

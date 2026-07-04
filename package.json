@@ -16,6 +16,8 @@
     "db:studio": "drizzle-kit studio",
     "db:check": "node --env-file=.env.local scripts/check-db-connection.mjs",
     "db:seed": "node --env-file=.env.local scripts/seed-customers.mjs",
+    "data:enrich-ledger": "node scripts/enrich-candidates-from-ledger.mjs",
+    "data:enrich-ledger:dry": "node scripts/enrich-candidates-from-ledger.mjs --dry-run",
     "test": "vitest run",
     "test:watch": "vitest"
   },

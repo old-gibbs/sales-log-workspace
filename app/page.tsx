@@ -2,6 +2,10 @@ import { Workspace } from "@/components/workspace/Workspace";
 import positionsData from "@/data/positions.json";
 import workspaceData from "@/data/workspace.json";
 import { loadCandidates } from "@/lib/data/load-candidates";
+import {
+  indexLedgersByCustomerId,
+  loadLedgersByCustomerName,
+} from "@/lib/data/load-ledgers";
 import { loadOpenNextActionsByCustomerId } from "@/lib/data/load-next-actions";
 import { departmentsSchema, workspaceSchema } from "@/lib/schema";
 
@@ -35,11 +39,18 @@ export default async function Page() {
       initialCandidates.map((candidate) => candidate.id),
     );
 
+  const ledgersByName = await loadLedgersByCustomerName();
+  const initialLedgersByCustomerId = indexLedgersByCustomerId(
+    initialCandidates.map((c) => ({ id: c.id, name: c.profile.name })),
+    ledgersByName,
+  );
+
   return (
     <Workspace
       initialDepartments={deptResult.data}
       initialCandidates={initialCandidates}
       initialNextActionsByCustomerId={initialNextActionsByCustomerId}
+      initialLedgersByCustomerId={initialLedgersByCustomerId}
       workspace={wsResult.data}
     />
   );

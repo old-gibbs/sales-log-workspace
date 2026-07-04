@@ -1,0 +1,121 @@
+{
+  "candidateJsonId": "c4",
+  "customerName": "株式会社マルカネスーパー",
+  "itemCount": 397,
+  "supplierCount": 87,
+  "latestShipDate": "2026-06-30",
+  "topCategories": [
+    {
+      "code": "30",
+      "label": "雑品",
+      "count": 83
+    },
+    {
+      "code": "07",
+      "label": "食品トレー・ボンドン",
+      "count": 72
+    },
+    {
+      "code": "11",
+      "label": "調理・厨房資材",
+      "count": 60
+    },
+    {
+      "code": "16",
+      "label": "店舗什器",
+      "count": 58
+    }
+  ],
+  "items": [
+    {
+      "itemCode": "163558",
+      "itemName": "フレッシュマスター65×160",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 1.78,
+      "lastShipDate": "2026-06-30",
+      "supplierLabel": "仕入先B"
+    },
+    {
+      "itemCode": "622222",
+      "itemName": "LG-11",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 5.14,
+      "lastShipDate": "2026-06-30",
+      "supplierLabel": "仕入先B"
+    },
+    {
+      "itemCode": "609178",
+      "itemName": "S-G13-20",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 7.18,
+      "lastShipDate": "2026-06-30",
+      "supplierLabel": "仕入先B"
+    },
+    {
+      "itemCode": "869973",
+      "itemName": "トレーX15-25",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 9.16,
+      "lastShipDate": "2026-06-30",
+      "supplierLabel": "仕入先B"
+    },
+    {
+      "itemCode": "490793",
+      "itemName": "CP92-Fリッドストロ-アナ袋",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 9.14,
+      "lastShipDate": "2026-06-30",
+      "supplierLabel": "仕入先E"
+    },
+    {
+      "itemCode": "772773",
+      "itemName": "バイオタッチパック15-12",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 18.1,
+      "lastShipDate": "2026-06-30",
+      "supplierLabel": "仕入先A"
+    },
+    {
+      "itemCode": "014445",
+      "itemName": "バイオタッチパック17-12",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 22.6,
+      "lastShipDate": "2026-06-30",
+      "supplierLabel": "仕入先A"
+    },
+    {
+      "itemCode": "597365",
+      "itemName": "コプロミ-トペ-パ-45*100M",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 1232,
+      "lastShipDate": "2026-06-30",
+      "supplierLabel": "仕入先F"
+    },
+    {
+      "itemCode": "487451",
+      "itemName": "J22-15T　黒",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 9.23,
+      "lastShipDate": "2026-06-30",
+      "supplierLabel": "仕入先A"
+    },
+    {
+      "itemCode": "793904",
+      "itemName": "バイオタッチパック16-12",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 23.8,
+      "lastShipDate": "2026-06-30",
+      "supplierLabel": "仕入先A"
+    }
+  ]
+}

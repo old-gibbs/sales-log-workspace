@@ -172,6 +172,40 @@ export const candidateSchema = z.object({
 });
 export type Candidate = z.infer<typeof candidateSchema>;
 
+// ===== 取引台帳（Step 2: data/ledger/*.json、閲覧専用） =====
+
+export const ledgerCategorySummarySchema = z.object({
+  code: z.string(),
+  label: z.string(),
+  count: z.number(),
+});
+export type LedgerCategorySummary = z.infer<typeof ledgerCategorySummarySchema>;
+
+export const ledgerItemSchema = z.object({
+  itemCode: z.string(),
+  itemName: z.string(),
+  categoryCode: z.string(),
+  categoryLabel: z.string(),
+  sellPrice: z.number().nullable(),
+  lastShipDate: z.string().nullable(),
+  supplierLabel: z.string(),
+});
+export type LedgerItem = z.infer<typeof ledgerItemSchema>;
+
+export const customerLedgerSchema = z.object({
+  candidateJsonId: z.string(),
+  customerName: z.string(),
+  itemCount: z.number(),
+  supplierCount: z.number(),
+  latestShipDate: z.string().nullable(),
+  topCategories: z.array(ledgerCategorySummarySchema),
+  items: z.array(ledgerItemSchema),
+});
+export type CustomerLedger = z.infer<typeof customerLedgerSchema>;
+
+/** Neon customer id → 取引台帳（なければ null） */
+export type LedgersByCustomerId = Record<string, CustomerLedger | null>;
+
 // ===== JSON 全体用スキーマ =====
 
 export const departmentsSchema = z.array(departmentSchema);

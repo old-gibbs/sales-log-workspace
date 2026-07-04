@@ -51,6 +51,7 @@ import {
   type Group,
   type SelectedDetail,
   type NextActionsByCustomerId,
+  type LedgersByCustomerId,
   STAGE_ORDER,
 } from "@/lib/schema";
 import {
@@ -96,6 +97,7 @@ type WorkspaceProps = {
   initialDepartments: Department[];
   initialCandidates: Candidate[];
   initialNextActionsByCustomerId: NextActionsByCustomerId;
+  initialLedgersByCustomerId: LedgersByCustomerId;
   workspace: { name: string; icon: string };
 };
 
@@ -103,6 +105,7 @@ export function Workspace({
   initialDepartments,
   initialCandidates,
   initialNextActionsByCustomerId,
+  initialLedgersByCustomerId,
   workspace,
 }: WorkspaceProps) {
   const [departments, setDepartments] =
@@ -119,6 +122,7 @@ export function Workspace({
   const [pane4ManuallyClosed, setPane4ManuallyClosed] = useState(false);
   // Pane 3 ヘッダー帯（Collapsible）の開閉。候補者切替で閉じ、新規追加で開く。
   const [applicationInfoOpen, setApplicationInfoOpen] = useState(false);
+  const [ledgerItemsOpen, setLedgerItemsOpen] = useState(false);
 
   // Pane 4 の展開状態を派生計算（ADR-0015 §9 大決定 G）。
   // selectedDetail !== null かつ手動で畳んでいない → 開いている。
@@ -133,6 +137,7 @@ export function Workspace({
   const scorecards = activeCandidate.scorecards;
   const openNextAction =
     initialNextActionsByCustomerId[selectedCandidateId] ?? null;
+  const ledger = initialLedgersByCustomerId[selectedCandidateId] ?? null;
 
   // Mode1ProfileDetail は `setProfile: React.Dispatch<React.SetStateAction<Profile>>`
   // を期待している（採用案 X）。子コンポーネント側の signature を変えないために、
@@ -185,6 +190,7 @@ export function Workspace({
     setSelectedCandidateId(id);
     setSelectedDetail(null);
     setApplicationInfoOpen(false);
+    setLedgerItemsOpen(false);
     setPane4ManuallyClosed(false);
   }, []);
 
@@ -448,8 +454,13 @@ export function Workspace({
             setProfile={setProfile}
             applicationInfoOpen={applicationInfoOpen}
             onApplicationInfoOpenChange={setApplicationInfoOpen}
+            ledgerItemsOpen={ledgerItemsOpen}
+            onLedgerItemsOpenChange={setLedgerItemsOpen}
             selectedCandidateId={selectedCandidateId}
+            candidateStage={activeCandidate.stage}
+            candidateArchived={activeCandidate.archived}
             openNextAction={openNextAction}
+            ledger={ledger}
           />
           <CandidateDetailPane
             selectedCandidateId={selectedCandidateId}

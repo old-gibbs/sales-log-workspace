@@ -1,0 +1,121 @@
+{
+  "candidateJsonId": "c3",
+  "customerName": "株式会社グリーンキッチンホールディングス",
+  "itemCount": 86,
+  "supplierCount": 26,
+  "latestShipDate": "2026-07-03",
+  "topCategories": [
+    {
+      "code": "01",
+      "label": "真空パック・梱包材",
+      "count": 56
+    },
+    {
+      "code": "30",
+      "label": "雑品",
+      "count": 12
+    },
+    {
+      "code": "07",
+      "label": "食品トレー・ボンドン",
+      "count": 7
+    },
+    {
+      "code": "14",
+      "label": "袋・包装紙",
+      "count": 3
+    }
+  ],
+  "items": [
+    {
+      "itemCode": "878412",
+      "itemName": "Tーもりー120",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 10.9,
+      "lastShipDate": "2026-07-03",
+      "supplierLabel": "仕入先B"
+    },
+    {
+      "itemCode": "196143",
+      "itemName": "もりー120本体　黒",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 10.1,
+      "lastShipDate": "2026-07-03",
+      "supplierLabel": "仕入先B"
+    },
+    {
+      "itemCode": "205538",
+      "itemName": "トレーY12-30",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 5.12,
+      "lastShipDate": "2026-07-03",
+      "supplierLabel": "仕入先B"
+    },
+    {
+      "itemCode": "761516",
+      "itemName": "MTD30-30",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 38.4,
+      "lastShipDate": "2026-07-03",
+      "supplierLabel": "仕入先B"
+    },
+    {
+      "itemCode": "808489",
+      "itemName": "MTD30-30平　黒",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 42.4,
+      "lastShipDate": "2026-07-03",
+      "supplierLabel": "仕入先B"
+    },
+    {
+      "itemCode": "287076",
+      "itemName": "エスコン74-2蓋　透明",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 11.1,
+      "lastShipDate": "2026-07-03",
+      "supplierLabel": "仕入先A"
+    },
+    {
+      "itemCode": "482258",
+      "itemName": "エスコンUL-74-10身",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 11.2,
+      "lastShipDate": "2026-07-03",
+      "supplierLabel": "仕入先A"
+    },
+    {
+      "itemCode": "657265",
+      "itemName": "おさめ盛1-4O蓋",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 8.57,
+      "lastShipDate": "2026-07-03",
+      "supplierLabel": "仕入先F"
+    },
+    {
+      "itemCode": "698566",
+      "itemName": "バイオPSランチウェアF7BZ　黒",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 8.73,
+      "lastShipDate": "2026-07-03",
+      "supplierLabel": "仕入先F"
+    },
+    {
+      "itemCode": "219829",
+      "itemName": "おさめ盛1-4B身　黒",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 10.8,
+      "lastShipDate": "2026-07-03",
+      "supplierLabel": "仕入先F"
+    }
+  ]
+}

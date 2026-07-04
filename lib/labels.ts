@@ -52,6 +52,29 @@ export const PANE3_SECTION = {
   screeningFlowDescription: "過去の接触記録",
   nextAction: "次回アクション",
   nextActionDescription: "追客メモと期限（Neon に保存）",
+  ledgerItems: "取引品目（台帳）",
+  ledgerItemsDescription: "直近出荷順・閲覧専用（CSV 取込・マスク済）",
+  weeklyAction: "今週の打ち手",
+  weeklyActionDescription:
+    "接触記録と次回アクションから導いた提案（閲覧専用・Neon には保存しない）",
+} as const;
+
+/** Pane 3「顧客基本情報」カード内のフィールドラベル（profile 型キーは雛形互換のまま）。 */
+export const PROFILE_FIELD = {
+  name: "顧客名",
+  firstContactDate: "初回接触日",
+  source: "流入経路",
+  recruiter: "自社担当",
+  contactSection: "連絡先",
+  email: "メールアドレス",
+  phone: "電話番号",
+  address: "住所",
+  activityTimeline: "活動タイムライン",
+  backgroundAndNeeds: "背景・ニーズ",
+  budgetMin: "想定予算（下限）",
+  budgetMax: "想定予算（上限）",
+  budgetUnit: "万円",
+  availableStartDate: "導入想定日",
 } as const;
 
 // ===== Pane 4 セクション id（ADR-0015 §19 でモード 1 廃止、m2 のみ） =====

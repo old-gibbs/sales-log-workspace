@@ -1,0 +1,121 @@
+{
+  "candidateJsonId": "c1",
+  "customerName": "株式会社フレッシュタウン",
+  "itemCount": 822,
+  "supplierCount": 50,
+  "latestShipDate": "2026-07-04",
+  "topCategories": [
+    {
+      "code": "01",
+      "label": "真空パック・梱包材",
+      "count": 663
+    },
+    {
+      "code": "30",
+      "label": "雑品",
+      "count": 43
+    },
+    {
+      "code": "07",
+      "label": "食品トレー・ボンドン",
+      "count": 37
+    },
+    {
+      "code": "19",
+      "label": "レジ・店舗用品",
+      "count": 16
+    }
+  ],
+  "items": [
+    {
+      "itemCode": "482057",
+      "itemName": "ステージ25-15　黒",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 24.7,
+      "lastShipDate": "2026-07-04",
+      "supplierLabel": "仕入先A"
+    },
+    {
+      "itemCode": "534619",
+      "itemName": "舟型20-12　青",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 13.5,
+      "lastShipDate": "2026-07-04",
+      "supplierLabel": "仕入先A"
+    },
+    {
+      "itemCode": "100274",
+      "itemName": "トレー10-30",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 3.39,
+      "lastShipDate": "2026-07-04",
+      "supplierLabel": "仕入先A"
+    },
+    {
+      "itemCode": "302148",
+      "itemName": "ステージ1-6",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": null,
+      "lastShipDate": "2026-07-04",
+      "supplierLabel": "仕入先A"
+    },
+    {
+      "itemCode": "318853",
+      "itemName": "トレー12-25　黒",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 8.13,
+      "lastShipDate": "2026-07-04",
+      "supplierLabel": "仕入先A"
+    },
+    {
+      "itemCode": "138832",
+      "itemName": "12-30",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 7.21,
+      "lastShipDate": "2026-07-04",
+      "supplierLabel": "仕入先A"
+    },
+    {
+      "itemCode": "306544",
+      "itemName": "M皿2-4本体　青",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 38.5,
+      "lastShipDate": "2026-07-04",
+      "supplierLabel": "仕入先A"
+    },
+    {
+      "itemCode": "205563",
+      "itemName": "トレーY14-30",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 6.17,
+      "lastShipDate": "2026-07-04",
+      "supplierLabel": "仕入先A"
+    },
+    {
+      "itemCode": "046071",
+      "itemName": "15-30",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 8.82,
+      "lastShipDate": "2026-07-04",
+      "supplierLabel": "仕入先A"
+    },
+    {
+      "itemCode": "326596",
+      "itemName": "BOX20-20　黒",
+      "categoryCode": "01",
+      "categoryLabel": "真空パック・梱包材",
+      "sellPrice": 43.8,
+      "lastShipDate": "2026-07-04",
+      "supplierLabel": "仕入先A"
+    }
+  ]
+}
